@@ -1,6 +1,6 @@
 /*
- * Copyright 2012, Marx Gomes van der Linden.
- *                 marx@unb.br
+ * Copyright 2014-2020, Marx Gomes van der Linden
+ *                      marx.linden@ifb.edu.br
  * 
  * This file is part of HmmPred.
  * 

@@ -1,6 +1,6 @@
 /*
- * Copyright 2014, Marx Gomes van der Linden.
- *                 marx@unb.br
+ * Copyright 2014-2020, Marx Gomes van der Linden
+ *                      marx.linden@ifb.edu.br
  * 
  * This file is part of HmmPred.
  * 
@@ -43,7 +43,7 @@ void usage();
 
 inline bool fileExists(string filename){
 	ifstream ifile(filename.c_str());
-	return ifile;
+	return (bool) ifile;
 }
 
 int main(int argc, char **argv) {
