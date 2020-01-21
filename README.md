@@ -20,7 +20,7 @@ you will need the following libraries:
 - The GNU Scientific Library (GSL)
 - The CppTest unit testing framework
 
-Both are easily available as free software.
+All of them are easily available as free software.
 
 ## Compiling
 
