@@ -1,5 +1,4 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5BC19CC91127CCA10A56CB9BE52111B6143266A7",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -8,11 +7,11 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7798569B-6CBA-406F-9F48-F367ECD52161",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "5BC19CC91127CCA10A56CB9BE52111B6143266A7" : "hmmpred\/"
+    "5BC19CC91127CCA10A56CB9BE52111B6143266A7" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "hmmpred",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "hmmpred\/hmmpred.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "hmmpred.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/marxvdl\/hmmpred.git",

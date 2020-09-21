@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12C47B8D2518F3EE00016704 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C47B8C2518F3EE00016704 /* main.cpp */; };
+		12C47BA22518F62200016704 /* Hmm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C47B972518F62000016704 /* Hmm.cpp */; };
+		12C47BA32518F62200016704 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C47B992518F62000016704 /* main.cpp */; };
+		12C47BA42518F62200016704 /* Hmm-PrintTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C47B9A2518F62000016704 /* Hmm-PrintTable.cpp */; };
+		12C47BA52518F62200016704 /* mappings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C47B9B2518F62000016704 /* mappings.cpp */; };
+		12C47BA62518F62200016704 /* Stats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C47B9D2518F62100016704 /* Stats.cpp */; };
+		12C47BA72518F62200016704 /* Hmm-FB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C47BA12518F62200016704 /* Hmm-FB.cpp */; };
+		12C47BAA2518F7E500016704 /* Hmm-IO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12C47BA92518F7E500016704 /* Hmm-IO.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +30,19 @@
 
 /* Begin PBXFileReference section */
 		12C47B892518F3EE00016704 /* hmmpred */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hmmpred; sourceTree = BUILT_PRODUCTS_DIR; };
-		12C47B8C2518F3EE00016704 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		12C47B962518F61F00016704 /* Hmm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hmm.h; sourceTree = "<group>"; };
+		12C47B972518F62000016704 /* Hmm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hmm.cpp; sourceTree = "<group>"; };
+		12C47B982518F62000016704 /* mappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mappings.h; sourceTree = "<group>"; };
+		12C47B992518F62000016704 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		12C47B9A2518F62000016704 /* Hmm-PrintTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Hmm-PrintTable.cpp"; sourceTree = "<group>"; };
+		12C47B9B2518F62000016704 /* mappings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mappings.cpp; sourceTree = "<group>"; };
+		12C47B9C2518F62100016704 /* Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequence.h; sourceTree = "<group>"; };
+		12C47B9D2518F62100016704 /* Stats.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stats.cpp; sourceTree = "<group>"; };
+		12C47B9E2518F62100016704 /* Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stats.h; sourceTree = "<group>"; };
+		12C47B9F2518F62100016704 /* fasta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fasta.h; sourceTree = "<group>"; };
+		12C47BA02518F62100016704 /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = misc.h; sourceTree = "<group>"; };
+		12C47BA12518F62200016704 /* Hmm-FB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Hmm-FB.cpp"; sourceTree = "<group>"; };
+		12C47BA92518F7E500016704 /* Hmm-IO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Hmm-IO.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,19 @@
 		12C47B802518F3ED00016704 = {
 			isa = PBXGroup;
 			children = (
+				12C47B9F2518F62100016704 /* fasta.h */,
+				12C47BA12518F62200016704 /* Hmm-FB.cpp */,
+				12C47B9A2518F62000016704 /* Hmm-PrintTable.cpp */,
+				12C47B972518F62000016704 /* Hmm.cpp */,
+				12C47B962518F61F00016704 /* Hmm.h */,
+				12C47B992518F62000016704 /* main.cpp */,
+				12C47BA92518F7E500016704 /* Hmm-IO.cpp */,
+				12C47B9B2518F62000016704 /* mappings.cpp */,
+				12C47B982518F62000016704 /* mappings.h */,
+				12C47BA02518F62100016704 /* misc.h */,
+				12C47B9C2518F62100016704 /* Sequence.h */,
+				12C47B9D2518F62100016704 /* Stats.cpp */,
+				12C47B9E2518F62100016704 /* Stats.h */,
 				12C47B8B2518F3EE00016704 /* hmmpred */,
 				12C47B8A2518F3EE00016704 /* Products */,
 			);
@@ -57,7 +88,6 @@
 		12C47B8B2518F3EE00016704 /* hmmpred */ = {
 			isa = PBXGroup;
 			children = (
-				12C47B8C2518F3EE00016704 /* main.cpp */,
 			);
 			path = hmmpred;
 			sourceTree = "<group>";
@@ -118,7 +148,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12C47B8D2518F3EE00016704 /* main.cpp in Sources */,
+				12C47BAA2518F7E500016704 /* Hmm-IO.cpp in Sources */,
+				12C47BA52518F62200016704 /* mappings.cpp in Sources */,
+				12C47BA32518F62200016704 /* main.cpp in Sources */,
+				12C47BA72518F62200016704 /* Hmm-FB.cpp in Sources */,
+				12C47BA42518F62200016704 /* Hmm-PrintTable.cpp in Sources */,
+				12C47BA22518F62200016704 /* Hmm.cpp in Sources */,
+				12C47BA62518F62200016704 /* Stats.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +276,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/local/include/boost/,
+					/opt/local/include/,
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/local/lib/;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lboost_program_options-mt",
+					"-lgsl",
+					"-lgslcblas",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +294,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					/opt/local/include/boost/,
+					/opt/local/include/,
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /opt/local/lib/;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lboost_program_options-mt",
+					"-lgsl",
+					"-lgslcblas",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
