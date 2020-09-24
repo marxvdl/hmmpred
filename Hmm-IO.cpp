@@ -51,9 +51,9 @@ void Hmm::insideOutside(vector<byte>& seq){
     // and therefore SecondarySymbols must be constructed accordingly (AFPA)
     
     uint SScpair[numberOfStates];
-    uint number1 = numberOfXtraHalfStates * numberOfSecondarySymbols;
-    uint number2 = numberOfXtraHalfStates;
-    uint number3 = numberOfXtraHalfStates / numberOfSecondarySymbols;
+    ulint number1 = numberOfXtraHalfStates * numberOfSecondarySymbols;
+    ulint number2 = numberOfXtraHalfStates;
+    ulint number3 = numberOfXtraHalfStates / numberOfSecondarySymbols;
     
     for(uint i = 0; i < numberOfStates; i++){
         uint SScpair1 = i % number1 / number2;
@@ -97,82 +97,93 @@ void Hmm::insideOutside(vector<byte>& seq){
     // probability of state i at position t and state j at position v
     // given the outside sequence, i.e., excluding the sequence fragment from t to v
     
-    vector< vector< vector<real> > > gammaLeft(windowedLength,
-                                                vector< vector<real> > (windowedLength, vector<real> (numberOfStates, 0.0)));
-    vector< vector< vector<real> > > gammaRight(windowedLength,
-                                                vector< vector<real> > (windowedLength, vector<real> (numberOfStates, 0.0)));
+ //   vector< vector< vector<real> > > gammaLeft(windowedLength,
+ //                                               vector< vector<real> > (windowedLength, vector<real> (numberOfStates, 1.0)));
+ //   vector< vector< vector<real> > > gammaRight(windowedLength,
+ //                                               vector< vector<real> > (windowedLength, vector<real> (numberOfStates, 1.0)));
+    
+    vector< vector < vector < vector<real> > > > gammaLeftRight(windowedLength,
+                                                                vector< vector < vector<real> > > (windowedLength, vector < vector<real> > (numberOfStates, vector <real> (numberOfStates, 0.0))));
+    //
+    //Talvez tenha que colocar em uma mesma matriz bem maior gamaLeftRight
+    //para normalizar corretamente !!!
+    //
+    
     vector<real> transLeftProb(numberOfFragments, 0.0);
     vector<real> transRightProb(numberOfFragments, 0.0);
     
     // 1.1 Initialization
-    for (ulint i=0; i < numberOfStates; i++){
-        gammaLeft[0][windowedLength-1][i] = probState_head[i];
-        gammaRight[0][windowedLength-1][i] =  probState_tail[i];
-    }
+    if(headAndTail)
+        for(ulint i=0; i < numberOfStates; i++)
+            for(ulint j=0; j < numberOfStates; j++)
+                gammaLeftRight[0][windowedLength-1][i][j] = probState_head[i] * probState_tail[j];
+    else
+        for(ulint i=0; i < numberOfStates; i++)
+            for(ulint j=0; j < numberOfStates; j++)
+                gammaLeftRight[0][windowedLength-1][i][j] = 1.0;
         
     // 1.2 Induction
-    for(uint t=0; t < windowedLength; t++){
+    for(int t=0; t < windowedLength; t++){
         if(t > 0) {
             for(ulint i=0; i<numberOfFragments; i++)
                     transLeftProb[i] = probFragment[i] *
                         probFragmentEmitsPrimarySymbol[i][ seq[t-1+halfWindow] ];
             normalize(transLeftProb);
         }
-        for (uint v=windowedLength-1; v >= t; v--) {
-            if(t==0 && v==windowedLength-1) continue;
+        for (int v=windowedLength-1; v >= t; v--) {
+ //           assert(v >= 0);
+//            if(t==0 && v==windowedLength-1) continue;
             if(v < windowedLength - 1) {
                 for(ulint i=0; i<numberOfFragments; i++)
                     transRightProb[i] = probFragment[i] *
                             probFragmentEmitsPrimarySymbol[i][ seq[v+1+halfWindow] ];
                     normalize(transRightProb);
             }
-            for(ulint nextleft=0; nextleft<numberOfStates; nextleft++)
+            for(ulint nextleft=0; nextleft<numberOfStates; nextleft++){
                 for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
                     ulint transleft = nextleft + (ss * numberOfStates);
                     ulint prevleft = transleft / numberOfSecondarySymbols;
-                    real probleft0 = gammaLeft[t-1][v][prevleft] * transLeftProb[transleft];
-                    real probleft1 = (v < windowedLength - 1) ?
-                                    gammaLeft[t-1][v+1][prevleft] * transLeftProb[transleft]
-                                    :
-                                    0.0;
                     
-                    for(ulint prevright=0; prevright<numberOfStates; prevright++)
+                    for(ulint prevright=0; prevright<numberOfStates; prevright++){
                         for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
                             ulint transright = (prevright * numberOfSecondarySymbols) + tt;
                             ulint nextright = transright % numberOfStates;
-                            real probright0 = gammaRight[t][v+1][nextright]
-                                                * transRightProb[transright];
-                            real probright1 = (t > 0) ?
-                                            gammaRight[t-1][v+1][nextright] * transRightProb[transright]
-                                            :
-                                            0.0;
-                           
-                                                        
+                                                                                   
                             if( t > 0 && v < windowedLength - 1 &&
                                 isLeftProduced[SScpair[nextleft]][SScpair[prevright]] &&
                                 probState[prevleft] != 0 &&
                                 isRightProduced[SScpair[nextleft]][SScpair[prevright]] &&
                                 probState[nextright] != 0){
-                                    real probleftright = probleft1 * probright1/probState[prevleft] / probState[nextright];
-                                        gammaLeft[t][v][nextleft] += probleftright;
-                                        gammaRight[t][v][prevright] += probleftright;
+                                real probleftright = gammaLeftRight[t-1][v+1][prevleft][nextright] * transLeftProb[transleft] / probState[prevleft] * transRightProb[transright] / probState[nextright];
+                                gammaLeftRight[t][v][nextleft][prevright] += probleftright;
+                            }
+                                                                                                
+                            else if(t > 0 &&
+                                isLeftProduced[SScpair[nextleft]][SScpair[prevright]] &&
+                                        probState[prevleft] != 0){
+                                    real probleft = gammaLeftRight[t-1][v][prevleft][prevright] * transLeftProb[transleft] / probState[prevleft];
+                                    gammaLeftRight[t][v][nextleft][prevright] += probleft;
                                 }
-                                else if(t > 0 &&
-                                        isLeftProduced[SScpair[nextleft]][SScpair[prevright]] &&
-                                        probState[prevleft] != 0)
-                                        gammaLeft[t][v][nextleft] +=
-                                            probleft0 / probState[prevleft];
-                                else if(v < windowedLength - 1 &&
-                                        isRightProduced[SScpair[nextleft]][SScpair[prevright]] &&
-                                        probState[nextright] != 0)
-                                            gammaRight[t][v][prevright] +=
-                                                probright0 / probState[nextright];
+            
+                            else if(v < windowedLength - 1 &&
+                                isRightProduced[SScpair[nextleft]][SScpair[prevright]] &&
+                                        probState[nextright] != 0){
+                                    real probright = gammaLeftRight[t][v+1][nextleft][nextright] * transRightProb[transright] / probState[nextright];
+                                gammaLeftRight[t][v][nextleft][prevright] += probright;
+                            }
+                            
+                   
                                 else ;
                         }
+                    }
+                    
                 }
+            }
         
-            normalize(gammaLeft[t][v]);
-            normalize(gammaRight[t][v]);
+            normalize(gammaLeftRight[t][v]);
+            
+    //        normalize(gammaLeft[t][v]);
+    //        normalize(gammaRight[t][v]);
         }
     }
   
@@ -202,8 +213,11 @@ void Hmm::insideOutside(vector<byte>& seq){
                 if(probState[prev] == 0||probState[next] == 0)
                     continue;
          
-                gamma[t][next] = gammaLeft[t][t][prev] * transLeftProb[trans] / probState[prev]
-                                * gammaRight[t][t][next] / probState[next];
+    //            gamma[t][next] = gammaLeft[t][t][prev] * transLeftProb[trans] / probState[prev]
+    //                            * gammaRight[t][t][next] / probState[next];
+    
+                gamma[t][next] = gammaLeftRight[t][t][prev][next] /probState[prev] / probState[next];
+                
             }
         
         normalize(gamma[t]);

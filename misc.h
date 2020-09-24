@@ -109,6 +109,17 @@ template<class T> inline void normalize(vector<T>& v){
 			v[i] /= sum;
 }
 
+template<class T> inline void normalize(vector< vector<T> >& v){
+    real sum = 0;
+    for(uint i=0; i<v.size(); i++)
+        for(uint j=0; j<v[i].size(); j++)
+            sum += v[i][j];
+    if(sum != 0)
+        for(uint i=0; i<v.size(); i++)
+            for(uint j=0; j<v[i].size(); j++)
+                v[i][j] /= sum;
+}
+
 inline uint maxElement(vector<real>& v){
 	double max = -1;
 	uint kmax = 0;
