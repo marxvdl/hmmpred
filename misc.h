@@ -109,6 +109,19 @@ template<class T> inline void normalize(vector<T>& v){
 			v[i] /= sum;
 }
 
+template<class T> inline void normalize(vector<T>& v1, vector<T>& v2){
+    real sum = 0;
+    for(uint i=0; i<v1.size(); i++)
+        for(uint j=0; j<v2.size(); j++)
+            sum += v1[i]*v2[j];
+    if(sum != 0){
+        for(uint i=0; i<v1.size(); i++)
+            v1[i] /= sqrt(sum);
+        for(uint i=0; i<v2.size(); i++)
+            v2[i] /= sqrt(sum);
+    }
+}
+
 template<class T> inline void normalize(vector< vector<T> >& v){
     real sum = 0;
     for(uint i=0; i<v.size(); i++)

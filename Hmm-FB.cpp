@@ -285,10 +285,17 @@ void Hmm::forwardBackward(vector<byte>& seq){
 vector< vector<real> > Hmm::getProbabilities(vector<byte>& originalSeq, uint r){
 	vector<byte> seq = addXXXs( originalSeq, numberOfPrimarySymbols-1 );
     
-    if(predGrammar)
-        insideOutside(seq);
-    else
-        forwardBackward(seq);
+    switch(predGrammar){
+        case 0:
+            forwardBackward(seq);
+            break;
+        case 1:
+            insideOutside(seq);
+            break;
+        case 2:
+            insideOutsideLeftRightTogether(seq);
+    }
+       
 	uint fullLength = seq.size();
 
 	if(r != 0)                      //<- this is just to sync getProbabilities(..) with predict(..)
@@ -316,10 +323,16 @@ vector<byte> Hmm::predict(vector<byte>& originalSeq, vector<byte> &secondarySeq,
 	vector<byte> seq = addXXXs( originalSeq, numberOfPrimarySymbols-1 );
 	uint fullLength = seq.size();
 	
-    if(predGrammar)
-        insideOutside(seq);
-    else
-        forwardBackward(seq);
+    switch(predGrammar){
+        case 0:
+            forwardBackward(seq);
+            break;
+        case 1:
+            insideOutside(seq);
+            break;
+        case 2:
+            insideOutsideLeftRightTogether(seq);
+    }
     
 	vector<uint> totalPartials(windowSize-1, 0);
 	uint totalResidues = 0;

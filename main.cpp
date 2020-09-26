@@ -86,7 +86,7 @@ int main(int argc, char **argv) {
 	bool loglikes = false;
     
     //arguments added by AFPA
-    byte predGrammar;
+    int predGrammar;
     bool seqAlignment = false;
     bool burialConstraints = false;
     
@@ -111,7 +111,7 @@ int main(int argc, char **argv) {
 		("no-partials,x",	"")
 		("head-and-tail,h",	"")
 		("loglikes,k",		"")
-        ("grammar,g", po::value<byte>  (&predGrammar ) -> default_value(0))
+        ("grammar,g", po::value<int> (&predGrammar ) -> default_value(0))
         ("burialconstraints,c",    "")
         ("seqalignment,a",         "")
 		;

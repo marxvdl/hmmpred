@@ -82,6 +82,7 @@ private:
     //insideOutside method, introduced by AFPA
     //
     void insideOutside(vector<byte>& seq);
+    void insideOutsideLeftRightTogether(vector<byte>& seq);
 
 	void forwardBackward(vector<byte>& seq);
 	vector< vector<real> > probSecondarySymbol;
@@ -118,7 +119,7 @@ public:
 	bool loglikes;
     
     //options added by AFPA
-    byte predGrammar;
+    int predGrammar;
     bool seqAlignment;
     bool burialConstraints;
     
