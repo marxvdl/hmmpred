@@ -481,35 +481,49 @@ void Hmm::insideOutsideLeftRightTogether(vector<byte>& seq){
     //Each pair of states acts as a non-terminal that produces other non-terminals
     //while emitting terminals (PrimarySymbols) at its left and/or right side.
     
-  
+   // C-doubleState-C emits at left, H-doubleState-H and E-doubleState-E emit at left and right
     
-    /*
+   /*
     
-    bool isLeftProduced[9][9] = {{1, 0, 0, 1, 0, 0, 1, 0, 0},
-                                 {0, 0, 0, 1, 0, 0, 0, 0, 0},
-                                 {0, 0, 0, 1, 0, 0, 1, 0, 0},
-                                 {0, 1, 1, 0, 0, 0, 0, 0, 0},
-                                 {0, 1, 1, 0, 1, 0, 0, 1, 0},
-                                 {0, 1, 1, 0, 0, 0, 0, 1, 0},
-                                 {0, 1, 1, 0, 0, 0, 0, 0, 0},
-                                 {0, 1, 1, 1, 0, 1, 0, 0, 0},
-                                 {0, 1, 1, 1, 0, 1, 0, 0, 1}};
+
+    bool isLeftProduced[9][9] = {{0, 0, 0, 0, 0, 0, 1, 0, 0},
+                                 {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                 {0, 0, 0, 0, 0, 0, 1, 0, 0},
+                                 {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                 {0, 0, 1, 0, 0, 0, 0, 1, 0},
+                                 {0, 0, 1, 0, 0, 0, 0, 1, 0},
+                                 {0, 0, 1, 0, 0, 1, 1, 1, 0},
+                                 {0, 0, 1, 0, 0, 1, 1, 1, 0},
+                                 {0, 0, 1, 0, 0, 1, 1, 1, 0}};
+    
+    
+    bool isLeftRightProduced[9][9] ={{1, 0, 0, 0, 0, 0, 1, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {1, 0, 0, 0, 0, 0, 1, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 1, 0, 0, 1, 0},
+                                     {0, 0, 0, 0, 1, 0, 0, 1, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0}};
+    
                                     
-    bool isRightProduced[9][9] = {{1, 0, 0, 0, 0, 0, 0, 0, 0},
-                                   {1, 0, 0, 1, 0, 0, 1, 0, 0},
+    bool isRightProduced[9][9] = {{0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                   {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                    {1, 0, 0, 0, 0, 0, 1, 0, 0},
-                                   {0, 1, 1, 0, 1, 1, 0, 1, 1},
-                                   {0, 0, 0, 0, 1, 0, 0, 0, 0},
+                                   {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                   {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                    {0, 0, 0, 0, 1, 0, 0, 1, 0},
-                                   {0, 1, 1, 0, 1, 1, 0, 1, 1},
-                                   {0, 0, 0, 1, 0, 1, 0, 0, 1},
-                                   {0, 0, 0, 0, 0, 0, 0, 0, 1}};
+                                   {0, 0, 1, 0, 1, 1, 0, 1, 1},
+                                   {0, 0, 1, 0, 0, 1, 0, 0, 1},
+                                   {0, 0, 0, 0, 0, 0, 0, 0, 0}};
     
     */
- 
-    
   
     
+  
+  //  E-doubleState-E, H-doubleState-H and C-doubleSttate-C emit at left and right
+   
     bool isLeftProduced[9][9] = {{0, 0, 0, 0, 0, 0, 1, 0, 0},
                                  {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                  {0, 0, 0, 0, 0, 0, 1, 0, 0},
@@ -542,7 +556,42 @@ void Hmm::insideOutsideLeftRightTogether(vector<byte>& seq){
                                    {0, 0, 1, 0, 0, 1, 0, 0, 1},
                                    {0, 0, 0, 0, 0, 0, 0, 0, 0}};
     
-     
+    
+    /*
+    
+    bool isLeftProduced[9][9] = {{1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                 {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                 {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                 {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                 {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                 {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                 {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                 {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                 {1, 1, 1, 1, 1, 1, 1, 1, 1}};
+    
+    
+    bool isLeftRightProduced[9][9] ={{0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                                     {0, 0, 0, 0, 0, 0, 0, 0, 0}};
+    
+                                    
+    bool isRightProduced[9][9] = {{1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                   {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                   {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                   {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                   {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                   {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                   {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                   {1, 1, 1, 1, 1, 1, 1, 1, 1},
+                                   {1, 1, 1, 1, 1, 1, 1, 1, 1}};
+    
+    */
    
     
     /*
@@ -595,6 +644,19 @@ void Hmm::insideOutsideLeftRightTogether(vector<byte>& seq){
     
     vector<real> transLeftProb(numberOfFragments, 0.0);
     vector<real> transRightProb(numberOfFragments, 0.0);
+    vector<real> probDoubleState(numberOfDoubleStates, 0.0);
+    
+    for(ulint i=0; i < numberOfStates; i++)
+        for(ulint j=0; j < numberOfStates; j++)
+            if(isLeftProduced[SScpair[i]][SScpair[j]] ||
+               isRightProduced[SScpair[i]][SScpair[j]] ||
+               isLeftRightProduced[SScpair[i]][SScpair[j]])
+            {
+                ulint doubleindex = i*numberOfStates +j;
+                probDoubleState[doubleindex] = probState[i]*probState[j];
+            }
+    normalize(probDoubleState);
+    
     
     //
     // 1.1 Initialization
@@ -606,9 +668,9 @@ void Hmm::insideOutsideLeftRightTogether(vector<byte>& seq){
     if(headAndTail){
         for(ulint i=0; i < numberOfStates; i++)
             for(ulint j=0; j < numberOfStates; j++)
-                if(isLeftProduced[SScpair[i]][SScpair[j]] ||
-                   isRightProduced[SScpair[i]][SScpair[j]] ||
-                   isLeftRightProduced[SScpair[i]][SScpair[j]])
+   //             if(isLeftProduced[SScpair[i]][SScpair[j]] ||
+   //                isRightProduced[SScpair[i]][SScpair[j]] ||
+   //                isLeftRightProduced[SScpair[i]][SScpair[j]])
                         gammaLeftRight[0][windowedLength-1][i*numberOfStates + j] =
                             probState_head[i] * probState_tail[j];
     }
@@ -622,25 +684,34 @@ void Hmm::insideOutsideLeftRightTogether(vector<byte>& seq){
     normalize(gammaLeftRight[0][windowedLength-1]);
     
     // 1.2 Induction
-    for(int t=0; t < windowedLength; t++){
+//    for(int t=0; t < windowedLength; t++){
+    
+    for(int u = windowedLength - 2; u >= 0; u-- ){
+        for(int v = u; v < windowedLength; v++){
+            
+            int t = v - u;
         
-         if(t > 0) {
-            for(ulint i=0; i<numberOfFragments; i++)
+          
+            if(t > 0) {
+                for(ulint i=0; i<numberOfFragments; i++)
                     transLeftProb[i] = probFragment[i] *
                         probFragmentEmitsPrimarySymbol[i][ seq[t-1+halfWindow] ];
-            normalize(transLeftProb);
-        }
+                normalize(transLeftProb);
+            }
     
-        for (int v=windowedLength-1; v >= t; v--) {
+ //       for (int v=windowedLength-2; v >= t; v--) {
  //           assert(v >= 0);
- 
-            if(t==0 && v==windowedLength-1)
-                continue;
+        
+ //       for(uint u=0; u < windowedLength-1-t; u++) {
+ //           uint v = windowedLength - 2 - u;
+ //           uint v = seq.size() - windowSize - u;
+ //           if(t==0 && v==windowedLength-1)
+ //               continue;
             
-            if(v < windowedLength) {
+            if(v < windowedLength - 1) {
                 for(ulint i=0; i<numberOfFragments; i++)
                     transRightProb[i] = probFragment[i] *
-                            probFragmentEmitsPrimarySymbol[i][ seq[v+1+halfWindow] ];
+                            probFragmentEmitsPrimarySymbol[i][ seq[v+halfWindow] ];
                     normalize(transRightProb);
             }
           
@@ -658,32 +729,49 @@ void Hmm::insideOutsideLeftRightTogether(vector<byte>& seq){
                                                                                    
                             if(isLeftRightProduced[SScpair[nextleft]][SScpair[prevright]])
                             {
+                                ulint parentdoubleindex = prevleft*numberOfStates + nextright;
                                 if(t > 0 && v < (windowedLength - 1) &&
                                    probState[prevleft] != 0 && probState[nextright] != 0)
+                                   //probDoubleState[parentdoubleindex] != 0)
                                 {
-                                    ulint parentdoubleindex = prevleft*numberOfStates + nextright;
-                                    real probleftright = gammaLeftRight[t-1][v+1][parentdoubleindex] * transLeftProb[transleft] / probState[prevleft] * transRightProb[transright] / probState[nextright];
+                                 //   ulint parentdoubleindex = prevleft*numberOfStates + nextright;
+                                    real probleftright = gammaLeftRight[t-1][v+1][parentdoubleindex]*
+                                        transLeftProb[transleft] * transRightProb[transright] /
+                                        probState[prevleft] / probState[nextright];
+                                        //probDoubleState[parentdoubleindex];
                                     gammaLeftRight[t][v][doubleindex] += probleftright;
                                 }
                             }
                                                                                                 
-                            if(isLeftProduced[SScpair[nextleft]][SScpair[prevright]])
+                            if(isLeftProduced[SScpair[nextleft]][SScpair[prevright]] ||
+                               isRightProduced[SScpair[nextleft]][SScpair[prevleft]] )
+                             //  v == windowedLength - 1)
                             {
+                                ulint parentdoubleindex = prevleft*numberOfStates + prevright;
                                 if( t > 0 && probState[prevleft] != 0)
+                                   //probDoubleState[parentdoubleindex] != 0)
                                 {
-                                    ulint parentdoubleindex = prevleft*numberOfStates + prevright;
+                              //      ulint parentdoubleindex = prevleft*numberOfStates + prevright;
                                     real probleft = gammaLeftRight[t-1][v][parentdoubleindex] *
-                                        transLeftProb[transleft] / probState[prevleft];
+                                        transLeftProb[transleft] /
+                                        probState[prevleft];
+                                        //probDoubleState[parentdoubleindex];
                                     gammaLeftRight[t][v][doubleindex] += probleft;
                                 }
                             }
-                            if(isRightProduced[SScpair[nextleft]][SScpair[prevright]])
+                            if(isRightProduced[SScpair[nextleft]][SScpair[prevright]] ||
+                               isLeftProduced[SScpair[prevright]][SScpair[nextright]])
+                            //   t == 0)
                             {
-                                if(v < windowedLength -1 && probState[nextright] != 0)
+                                ulint parentdoubleindex = nextleft*numberOfStates + nextright;
+                                if(v < windowedLength - 1 && probState[nextright] != 0)
+                                   //probDoubleState[parentdoubleindex] != 0)
                                 {
-                                    ulint parentdoubleindex = nextleft*numberOfStates + nextright;
+                                 //   ulint parentdoubleindex = nextleft*numberOfStates + nextright;
                                     real probright = gammaLeftRight[t][v+1][parentdoubleindex] *
-                                        transRightProb[transright] / probState[nextright];
+                                        transRightProb[transright] /
+                                        probState[nextright];
+                                        //probDoubleState[parentdoubleindex];
                                     gammaLeftRight[t][v][doubleindex] += probright;
                                 }
                             }
@@ -714,16 +802,16 @@ void Hmm::insideOutsideLeftRightTogether(vector<byte>& seq){
         
         
         //Inside
+ 
         
-   //     for(ulint i=0; i<numberOfStates; i++){
-   //         if(probState[i] == 0)
-   //             continue;
-    //
-   //         gamma[t][i] = gammaLeftRight[t][t][i*numberOfSecondarySymbols + i] / probState[i];
-    //    }
+        for(ulint i=0; i<numberOfStates; i++){
+            if(probState[i] == 0)
+                continue;
     
-        
-        for(ulint i=0; i < numberOfFragments; i++)
+            gamma[t][i] = gammaLeftRight[t][t][i*numberOfStates  + i] / probState[i];
+        }
+
+ /*       for(ulint i=0; i < numberOfFragments; i++)
             transProb[i] = probFragment[i] *
                 probFragmentEmitsPrimarySymbol[i][ seq[t+halfWindow] ];
             normalize(transProb);
@@ -737,18 +825,23 @@ void Hmm::insideOutsideLeftRightTogether(vector<byte>& seq){
                 ulint trans =  prev * numberOfSecondarySymbols + ss;
                 ulint next = trans % numberOfStates;
                 
-                probStateEmitsSeq += transProb[trans] * probState[next];
+                if(probState[next] == 0) continue;
+                
+                ulint doubleindex = prev*numberOfStates + next;
+                
+                probStateEmitsSeq += transProb[trans] *
+                                    gammaLeftRight[t][t+1][doubleindex] /
+                                    probState[next];
             }
              
-             probStateEmitsSeq /= probState[prev];
-             ulint doubleindex = prev * numberOfStates + prev;
-             
-             gamma[t][prev] = gammaLeftRight[t][t][doubleindex] * probStateEmitsSeq;
-             
-         }
-         
-        
-                
+            probStateEmitsSeq /= probState[prev];
+                  
+            gamma[t][prev] = probStateEmitsSeq;
+            
+        }
+  */
+    
+ 
         normalize(gamma[t]);
     }
     

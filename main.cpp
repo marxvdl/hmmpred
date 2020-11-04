@@ -278,7 +278,8 @@ int main(int argc, char **argv) {
 				<< "# Database:   " << trainingFile << "\n"
 				<< "# Query file: " << evalFile << "\n"
 				<< "# Secondary structure translation: " << secString << "\n"
-				<< "# Fragment length: " << windowSize << "\n";
+				<< "# Fragment length: " << windowSize << "\n"
+                << "# Grammar: "<< predGrammar << "\n";
 		if(stats)
 			header << "# Resampling sequences: " << nreplicas << " Replicas\n";
 		else
