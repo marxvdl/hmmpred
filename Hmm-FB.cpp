@@ -290,10 +290,14 @@ vector< vector<real> > Hmm::getProbabilities(vector<byte>& originalSeq, uint r){
             forwardBackward(seq);
             break;
         case 1:
-            insideOutside(seq);
+            insideOutsideV1(seq);
             break;
         case 2:
-            insideOutsideLeftRightTogether(seq);
+            insideOutsideV2(seq);
+        case 3:
+            insideOutsideV3(seq);
+        case 4:
+            insideOutsideV4(seq);
     }
        
 	uint fullLength = seq.size();
@@ -328,10 +332,15 @@ vector<byte> Hmm::predict(vector<byte>& originalSeq, vector<byte> &secondarySeq,
             forwardBackward(seq);
             break;
         case 1:
-            insideOutside(seq);
+            insideOutsideV1(seq);
             break;
         case 2:
-            insideOutsideLeftRightTogether(seq);
+            insideOutsideV2(seq);
+        case 3:
+            insideOutsideV3(seq);
+        case 4 :
+            insideOutsideV4(seq);
+            
     }
     
 	vector<uint> totalPartials(windowSize-1, 0);
