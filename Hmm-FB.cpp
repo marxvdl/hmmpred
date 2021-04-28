@@ -298,9 +298,11 @@ vector< vector<real> > Hmm::getProbabilities(vector<byte>& originalSeq, uint r){
             insideOutsideV3(seq);
         case 4:
             insideOutsideV4(seq);
+        case 5 :
+            insideOutsideV5(seq);
     }
        
-	uint fullLength = seq.size();
+	uint fullLength = (uint) seq.size();
 
 	if(r != 0)                      //<- this is just to sync getProbabilities(..) with predict(..)
 		gsl_ran_poisson(rng1, 1.0); //   when running with a fixed seed
@@ -340,7 +342,8 @@ vector<byte> Hmm::predict(vector<byte>& originalSeq, vector<byte> &secondarySeq,
             insideOutsideV3(seq);
         case 4 :
             insideOutsideV4(seq);
-            
+        case 5 :
+            insideOutsideV5(seq);
     }
     
 	vector<uint> totalPartials(windowSize-1, 0);

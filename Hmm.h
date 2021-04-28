@@ -87,6 +87,7 @@ private:
     void insideOutsideV2(vector<byte>& seq);
     void insideOutsideV3(vector<byte>& seq);
     void insideOutsideV4(vector<byte>& seq);
+    void insideOutsideV5(vector<byte>& seq);
 
 	void forwardBackward(vector<byte>& seq);
 	vector< vector<real> > probSecondarySymbol;
