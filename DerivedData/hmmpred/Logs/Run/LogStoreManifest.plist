@@ -6,6 +6,74 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>022323D6-8EF4-4ADC-A82C-79AA5B80419B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>022323D6-8EF4-4ADC-A82C-79AA5B80419B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641575871.01278698</real>
+			<key>timeStoppedRecording</key>
+			<real>641576132.38766301</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>022323D6-8EF4-4ADC-A82C-79AA5B80419B</string>
+		</dict>
+		<key>02D3BF48-4A92-4260-9C06-143A16284CE6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>02D3BF48-4A92-4260-9C06-143A16284CE6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641732289.71333206</real>
+			<key>timeStoppedRecording</key>
+			<real>641733069.64369094</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>02D3BF48-4A92-4260-9C06-143A16284CE6</string>
+		</dict>
 		<key>03C7FAD3-6980-406A-A69A-146257DA6698</key>
 		<dict>
 			<key>className</key>
@@ -39,6 +107,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>03C7FAD3-6980-406A-A69A-146257DA6698</string>
+		</dict>
+		<key>0516B300-9A19-4C86-95A5-79556E05F82B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0516B300-9A19-4C86-95A5-79556E05F82B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641700325.63898396</real>
+			<key>timeStoppedRecording</key>
+			<real>641700365.33840203</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>0516B300-9A19-4C86-95A5-79556E05F82B</string>
 		</dict>
 		<key>06700875-435A-40A7-946F-BD73A5F4AA11</key>
 		<dict>
@@ -244,6 +346,40 @@
 			<key>uniqueIdentifier</key>
 			<string>09450CF5-511F-4AE6-9DDF-47763CCAC4A5</string>
 		</dict>
+		<key>0A4ABD5B-87AD-40B6-82E1-1BF814C3EDB9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0A4ABD5B-87AD-40B6-82E1-1BF814C3EDB9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641765102.17217505</real>
+			<key>timeStoppedRecording</key>
+			<real>641765167.34509695</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>0A4ABD5B-87AD-40B6-82E1-1BF814C3EDB9</string>
+		</dict>
 		<key>0B936631-34D7-4B6D-8ADC-7999BCA3EE56</key>
 		<dict>
 			<key>className</key>
@@ -277,6 +413,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>0B936631-34D7-4B6D-8ADC-7999BCA3EE56</string>
+		</dict>
+		<key>0D3C481A-7687-48F0-91C7-ED5874B628BE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0D3C481A-7687-48F0-91C7-ED5874B628BE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4alleval</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641311458.93863201</real>
+			<key>timeStoppedRecording</key>
+			<real>641316638.31672597</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>0D3C481A-7687-48F0-91C7-ED5874B628BE</string>
 		</dict>
 		<key>0DB9B12A-EEA7-455D-86FB-A96A1DD9FD81</key>
 		<dict>
@@ -312,6 +482,40 @@
 			<key>uniqueIdentifier</key>
 			<string>0DB9B12A-EEA7-455D-86FB-A96A1DD9FD81</string>
 		</dict>
+		<key>0DD939ED-1EDE-4258-A65D-2B271DD1D6DE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0DD939ED-1EDE-4258-A65D-2B271DD1D6DE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641770665.61283696</real>
+			<key>timeStoppedRecording</key>
+			<real>641770731.12026501</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>0DD939ED-1EDE-4258-A65D-2B271DD1D6DE</string>
+		</dict>
 		<key>0ED5E1DC-E35F-4D7F-B073-933D8535C30F</key>
 		<dict>
 			<key>className</key>
@@ -345,6 +549,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>0ED5E1DC-E35F-4D7F-B073-933D8535C30F</string>
+		</dict>
+		<key>0FFC1426-9613-4291-98D0-CA71DE162F0F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0FFC1426-9613-4291-98D0-CA71DE162F0F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641635894.76632798</real>
+			<key>timeStoppedRecording</key>
+			<real>641635933.357445</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>0FFC1426-9613-4291-98D0-CA71DE162F0F</string>
 		</dict>
 		<key>1060D91E-65B4-4915-9E7F-233576F2F859</key>
 		<dict>
@@ -550,6 +788,40 @@
 			<key>uniqueIdentifier</key>
 			<string>18240A35-AAAD-4352-9B93-F963B45B2487</string>
 		</dict>
+		<key>1861E63D-54D3-47E6-8DAF-61C874BA86F6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1861E63D-54D3-47E6-8DAF-61C874BA86F6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641739670.73727798</real>
+			<key>timeStoppedRecording</key>
+			<real>641739815.72372496</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>1861E63D-54D3-47E6-8DAF-61C874BA86F6</string>
+		</dict>
 		<key>1B8B66F7-8794-443E-8C0C-187E8C6D9A6F</key>
 		<dict>
 			<key>className</key>
@@ -583,6 +855,142 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>1B8B66F7-8794-443E-8C0C-187E8C6D9A6F</string>
+		</dict>
+		<key>1C9BF94B-53DB-4C2B-9AFF-9E7CB463FFEF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1C9BF94B-53DB-4C2B-9AFF-9E7CB463FFEF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg5probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641410976.15587497</real>
+			<key>timeStoppedRecording</key>
+			<real>641411106.28078306</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>1C9BF94B-53DB-4C2B-9AFF-9E7CB463FFEF</string>
+		</dict>
+		<key>1CBEEAC4-2001-4213-ADEC-B0B6AD4B24CA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1CBEEAC4-2001-4213-ADEC-B0B6AD4B24CA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641730516.20394599</real>
+			<key>timeStoppedRecording</key>
+			<real>641730585.45677304</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>1CBEEAC4-2001-4213-ADEC-B0B6AD4B24CA</string>
+		</dict>
+		<key>1D89CAE7-3EF2-46EB-8712-3BD3B3A232A9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1D89CAE7-3EF2-46EB-8712-3BD3B3A232A9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641729345.90560603</real>
+			<key>timeStoppedRecording</key>
+			<real>641730016.34449899</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>1D89CAE7-3EF2-46EB-8712-3BD3B3A232A9</string>
+		</dict>
+		<key>1DCF12DC-513A-4C99-A5BC-A0ED5DBDCB64</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1DCF12DC-513A-4C99-A5BC-A0ED5DBDCB64.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641721956.40049398</real>
+			<key>timeStoppedRecording</key>
+			<real>641721988.28540504</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>1DCF12DC-513A-4C99-A5BC-A0ED5DBDCB64</string>
 		</dict>
 		<key>1DEB554D-A31B-4A3D-B511-8C98C3FBDF21</key>
 		<dict>
@@ -651,6 +1059,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>1FED43C2-479C-4D15-8AA8-430D54D6F5B1</string>
+		</dict>
+		<key>20E48FB9-AB26-4EB8-992C-7A8D2B2F6477</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>20E48FB9-AB26-4EB8-992C-7A8D2B2F6477.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641635333.18095696</real>
+			<key>timeStoppedRecording</key>
+			<real>641635372.766536</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>20E48FB9-AB26-4EB8-992C-7A8D2B2F6477</string>
 		</dict>
 		<key>211C6DD1-1E6D-4339-9A3D-6EEA80B2B06F</key>
 		<dict>
@@ -754,6 +1196,74 @@
 			<key>uniqueIdentifier</key>
 			<string>21839E3C-D2EA-4F87-97C3-365D02B98860</string>
 		</dict>
+		<key>21BAD9DC-34DC-4E08-9554-A07850F58955</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>21BAD9DC-34DC-4E08-9554-A07850F58955.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641740790.83276999</real>
+			<key>timeStoppedRecording</key>
+			<real>641740802.28932405</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>21BAD9DC-34DC-4E08-9554-A07850F58955</string>
+		</dict>
+		<key>23A3EFE5-4F57-4D81-8418-51E1D31C39C8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>23A3EFE5-4F57-4D81-8418-51E1D31C39C8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641730609.84355605</real>
+			<key>timeStoppedRecording</key>
+			<real>641730678.23106301</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>23A3EFE5-4F57-4D81-8418-51E1D31C39C8</string>
+		</dict>
 		<key>23E94114-6B5C-4D34-AE03-8AA8DB20B809</key>
 		<dict>
 			<key>className</key>
@@ -822,6 +1332,40 @@
 			<key>uniqueIdentifier</key>
 			<string>24F11781-3DF5-4CC1-97D8-8E5620EC5CC7</string>
 		</dict>
+		<key>27F0B7B3-714C-46C6-949B-6B382949EEEE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>27F0B7B3-714C-46C6-949B-6B382949EEEE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641764495.53543699</real>
+			<key>timeStoppedRecording</key>
+			<real>641764560.93006206</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>27F0B7B3-714C-46C6-949B-6B382949EEEE</string>
+		</dict>
 		<key>28BEA9F4-50A3-44D0-A818-BFEAFD21DA70</key>
 		<dict>
 			<key>className</key>
@@ -889,6 +1433,74 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>293F2840-4EB4-48AB-98EC-0B5857301F28</string>
+		</dict>
+		<key>29E2C8BC-ED0C-41F4-B941-3D7BD72CEBEE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>29E2C8BC-ED0C-41F4-B941-3D7BD72CEBEE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641635152.825526</real>
+			<key>timeStoppedRecording</key>
+			<real>641635190.10658896</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>29E2C8BC-ED0C-41F4-B941-3D7BD72CEBEE</string>
+		</dict>
+		<key>2AFC872F-42EC-454F-916A-35A230A00E51</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2AFC872F-42EC-454F-916A-35A230A00E51.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641769811.05404305</real>
+			<key>timeStoppedRecording</key>
+			<real>641769882.35719895</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>2AFC872F-42EC-454F-916A-35A230A00E51</string>
 		</dict>
 		<key>2B3D842C-B660-40BD-A038-CE5541495F87</key>
 		<dict>
@@ -1094,6 +1706,40 @@
 			<key>uniqueIdentifier</key>
 			<string>2E6E245E-1EF6-44CE-9878-68DBC60790AA</string>
 		</dict>
+		<key>302ACF53-385E-4432-8D66-4F4F1749D3EF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>302ACF53-385E-4432-8D66-4F4F1749D3EF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641572759.60886896</real>
+			<key>timeStoppedRecording</key>
+			<real>641572878.41605496</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>302ACF53-385E-4432-8D66-4F4F1749D3EF</string>
+		</dict>
 		<key>30F75C7E-9A88-4955-A5F4-88B74966C36B</key>
 		<dict>
 			<key>className</key>
@@ -1196,6 +1842,40 @@
 			<key>uniqueIdentifier</key>
 			<string>343F918C-4053-4C43-BB45-83B72F67C410</string>
 		</dict>
+		<key>349CCC04-FEDB-4318-B01C-904211FEDF04</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>349CCC04-FEDB-4318-B01C-904211FEDF04.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641633894.99788296</real>
+			<key>timeStoppedRecording</key>
+			<real>641633933.27847099</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>349CCC04-FEDB-4318-B01C-904211FEDF04</string>
+		</dict>
 		<key>34CE030C-2A02-4EE2-B150-D44B20B23672</key>
 		<dict>
 			<key>className</key>
@@ -1297,6 +1977,74 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>377ADE75-081B-41D0-9A42-0360DCE15BC5</string>
+		</dict>
+		<key>392F3326-D4FF-4CF6-AB1E-4349210700ED</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>392F3326-D4FF-4CF6-AB1E-4349210700ED.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641628557.73784196</real>
+			<key>timeStoppedRecording</key>
+			<real>641628745.21149695</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>392F3326-D4FF-4CF6-AB1E-4349210700ED</string>
+		</dict>
+		<key>3A179FE1-39B4-408D-B56D-6A33B86DAE8A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>3A179FE1-39B4-408D-B56D-6A33B86DAE8A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641634719.36641097</real>
+			<key>timeStoppedRecording</key>
+			<real>641634754.41254199</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>3A179FE1-39B4-408D-B56D-6A33B86DAE8A</string>
 		</dict>
 		<key>3A3458CE-69F1-4ED2-B858-ECAC5660977D</key>
 		<dict>
@@ -1638,6 +2386,40 @@
 			<key>uniqueIdentifier</key>
 			<string>4158DB6A-6B28-49BB-98DB-5DD78C853234</string>
 		</dict>
+		<key>416D86F5-93FE-4EFC-BF26-F4AD8AD01036</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>416D86F5-93FE-4EFC-BF26-F4AD8AD01036.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641722165.99383998</real>
+			<key>timeStoppedRecording</key>
+			<real>641722197.18947899</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>416D86F5-93FE-4EFC-BF26-F4AD8AD01036</string>
+		</dict>
 		<key>418EB44C-9298-4138-B3A0-E347416F2482</key>
 		<dict>
 			<key>className</key>
@@ -1672,6 +2454,40 @@
 			<key>uniqueIdentifier</key>
 			<string>418EB44C-9298-4138-B3A0-E347416F2482</string>
 		</dict>
+		<key>42E32929-70F9-4ACC-A26C-7DF6EED1D242</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>42E32929-70F9-4ACC-A26C-7DF6EED1D242.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641629710.51288295</real>
+			<key>timeStoppedRecording</key>
+			<real>641629863.77230299</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>42E32929-70F9-4ACC-A26C-7DF6EED1D242</string>
+		</dict>
 		<key>43D7C869-0EF9-46EC-9B55-B8DEB6EC51F5</key>
 		<dict>
 			<key>className</key>
@@ -1705,6 +2521,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>43D7C869-0EF9-46EC-9B55-B8DEB6EC51F5</string>
+		</dict>
+		<key>44E4CFE3-D285-4237-96F2-183A5635787B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>44E4CFE3-D285-4237-96F2-183A5635787B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641575613.51459002</real>
+			<key>timeStoppedRecording</key>
+			<real>641575688.01245701</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>44E4CFE3-D285-4237-96F2-183A5635787B</string>
 		</dict>
 		<key>450BF2C3-0A1C-40BC-8FEA-8A7572534B41</key>
 		<dict>
@@ -1842,6 +2692,74 @@
 			<key>uniqueIdentifier</key>
 			<string>47F4BCA8-0517-49C1-9814-A8B34CE1393F</string>
 		</dict>
+		<key>4961F8B1-D312-4C83-9D58-C929387BD569</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>4961F8B1-D312-4C83-9D58-C929387BD569.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641720263.88503397</real>
+			<key>timeStoppedRecording</key>
+			<real>641720301.42126405</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>4961F8B1-D312-4C83-9D58-C929387BD569</string>
+		</dict>
+		<key>49BF2106-1A1E-414E-809D-6CA876E2735B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>49BF2106-1A1E-414E-809D-6CA876E2735B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641496558.20365703</real>
+			<key>timeStoppedRecording</key>
+			<real>641496685.875036</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>49BF2106-1A1E-414E-809D-6CA876E2735B</string>
+		</dict>
 		<key>49E88C63-BE5E-46D0-90A1-5B7E62B8F4B6</key>
 		<dict>
 			<key>className</key>
@@ -1978,6 +2896,40 @@
 			<key>uniqueIdentifier</key>
 			<string>4FBCB507-F0A9-4999-ADBB-AC73079EB0DE</string>
 		</dict>
+		<key>512CEE07-1163-47C6-A015-915BCECEAB1A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>512CEE07-1163-47C6-A015-915BCECEAB1A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641634104.655972</real>
+			<key>timeStoppedRecording</key>
+			<real>641634139.83053303</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>512CEE07-1163-47C6-A015-915BCECEAB1A</string>
+		</dict>
 		<key>514DDF92-1816-41BF-95EF-05608310C555</key>
 		<dict>
 			<key>className</key>
@@ -2080,6 +3032,40 @@
 			<key>uniqueIdentifier</key>
 			<string>53AD0BDE-94EF-45E8-AFDC-B1D46EB38CC7</string>
 		</dict>
+		<key>53E1BC11-C1C3-4842-A63F-A938836FEC87</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>53E1BC11-C1C3-4842-A63F-A938836FEC87.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641741299.99477005</real>
+			<key>timeStoppedRecording</key>
+			<real>641741316.60288298</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>53E1BC11-C1C3-4842-A63F-A938836FEC87</string>
+		</dict>
 		<key>55A46181-0FAC-48E0-B040-15B07B8E58C3</key>
 		<dict>
 			<key>className</key>
@@ -2147,6 +3133,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>55F1C969-E6DB-4827-AF76-AD3381B372AA</string>
+		</dict>
+		<key>56CCEC3C-9EF9-48C2-815E-3E1E1FB9F2CE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>56CCEC3C-9EF9-48C2-815E-3E1E1FB9F2CE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg5probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641317585.079386</real>
+			<key>timeStoppedRecording</key>
+			<real>641317738.20647299</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>56CCEC3C-9EF9-48C2-815E-3E1E1FB9F2CE</string>
 		</dict>
 		<key>57124492-2AF0-46AC-80CB-1376725BC696</key>
 		<dict>
@@ -2284,6 +3304,40 @@
 			<key>uniqueIdentifier</key>
 			<string>59354800-54E1-4CD8-B240-3331D0308C0A</string>
 		</dict>
+		<key>5A22CC2B-2E02-4375-B446-80E39D23B73D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5A22CC2B-2E02-4375-B446-80E39D23B73D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641669637.21822906</real>
+			<key>timeStoppedRecording</key>
+			<real>641669676.26429999</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>5A22CC2B-2E02-4375-B446-80E39D23B73D</string>
+		</dict>
 		<key>5AF79B69-7F8A-435F-B2C8-6D75604DDBF9</key>
 		<dict>
 			<key>className</key>
@@ -2385,6 +3439,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>5B6768AA-8BFF-407C-A130-EAA88D780D35</string>
+		</dict>
+		<key>5BAF123A-FC9C-4998-8E3B-9D0ECC3B0CCB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5BAF123A-FC9C-4998-8E3B-9D0ECC3B0CCB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641629396.62842298</real>
+			<key>timeStoppedRecording</key>
+			<real>641629533.58829701</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>5BAF123A-FC9C-4998-8E3B-9D0ECC3B0CCB</string>
 		</dict>
 		<key>5BBE6CEB-5FA5-4240-91A5-23C8063F0B2A</key>
 		<dict>
@@ -2488,6 +3576,40 @@
 			<key>uniqueIdentifier</key>
 			<string>5DFE193A-8D38-453B-93AA-46234B3E4E55</string>
 		</dict>
+		<key>5E3436E7-BB34-4A0E-A4CD-D9060FEF15DA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5E3436E7-BB34-4A0E-A4CD-D9060FEF15DA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641630995.78271794</real>
+			<key>timeStoppedRecording</key>
+			<real>641631137.32986104</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>5E3436E7-BB34-4A0E-A4CD-D9060FEF15DA</string>
+		</dict>
 		<key>5ECCE18B-6CDD-4F3A-A1F8-B3DB91525C79</key>
 		<dict>
 			<key>className</key>
@@ -2521,6 +3643,74 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>5ECCE18B-6CDD-4F3A-A1F8-B3DB91525C79</string>
+		</dict>
+		<key>5F71C223-1D5B-4685-AB72-C4F91234FAB0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5F71C223-1D5B-4685-AB72-C4F91234FAB0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641574257.83610594</real>
+			<key>timeStoppedRecording</key>
+			<real>641574378.76235104</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>5F71C223-1D5B-4685-AB72-C4F91234FAB0</string>
+		</dict>
+		<key>61DBE6A3-17AE-45E7-A394-8292E91658D5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>61DBE6A3-17AE-45E7-A394-8292E91658D5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641670776.65101099</real>
+			<key>timeStoppedRecording</key>
+			<real>641670814.24399304</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>61DBE6A3-17AE-45E7-A394-8292E91658D5</string>
 		</dict>
 		<key>623119C0-6B23-4197-840C-918CF6518759</key>
 		<dict>
@@ -2556,6 +3746,40 @@
 			<key>uniqueIdentifier</key>
 			<string>623119C0-6B23-4197-840C-918CF6518759</string>
 		</dict>
+		<key>633A0F1A-4D8D-4C90-B79D-9D884641A29C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>633A0F1A-4D8D-4C90-B79D-9D884641A29C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641631543.88902104</real>
+			<key>timeStoppedRecording</key>
+			<real>641631686.90040004</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>633A0F1A-4D8D-4C90-B79D-9D884641A29C</string>
+		</dict>
 		<key>666A6F76-21D4-486E-B82E-C244B355BCC7</key>
 		<dict>
 			<key>className</key>
@@ -2590,6 +3814,40 @@
 			<key>uniqueIdentifier</key>
 			<string>666A6F76-21D4-486E-B82E-C244B355BCC7</string>
 		</dict>
+		<key>6718EF2C-7146-4EEA-9DE9-99F7A8D4D966</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6718EF2C-7146-4EEA-9DE9-99F7A8D4D966.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641765511.98573196</real>
+			<key>timeStoppedRecording</key>
+			<real>641765577.53254795</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>6718EF2C-7146-4EEA-9DE9-99F7A8D4D966</string>
+		</dict>
 		<key>679D6333-51A8-49C1-B3CB-229693BB5A52</key>
 		<dict>
 			<key>className</key>
@@ -2623,6 +3881,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>679D6333-51A8-49C1-B3CB-229693BB5A52</string>
+		</dict>
+		<key>688EA4CD-16A7-4D45-BA95-62AB957CE2B9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>688EA4CD-16A7-4D45-BA95-62AB957CE2B9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641635012.62859404</real>
+			<key>timeStoppedRecording</key>
+			<real>641635049.19918001</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>688EA4CD-16A7-4D45-BA95-62AB957CE2B9</string>
 		</dict>
 		<key>6C3EE87B-94E7-4553-8B87-5251A02CB074</key>
 		<dict>
@@ -2692,6 +3984,40 @@
 			<key>uniqueIdentifier</key>
 			<string>6EEF0ADF-5865-4173-B17B-5A54F519488B</string>
 		</dict>
+		<key>6EF9601A-A828-4B04-A15F-D79D5835BA2D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6EF9601A-A828-4B04-A15F-D79D5835BA2D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641728265.02622497</real>
+			<key>timeStoppedRecording</key>
+			<real>641728333.92975402</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>6EF9601A-A828-4B04-A15F-D79D5835BA2D</string>
+		</dict>
 		<key>6F632F86-D927-4552-97FA-C1FEBD06196B</key>
 		<dict>
 			<key>className</key>
@@ -2725,6 +4051,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>6F632F86-D927-4552-97FA-C1FEBD06196B</string>
+		</dict>
+		<key>6F7DD9E9-2B9B-4C96-B15C-E0E9066C6732</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6F7DD9E9-2B9B-4C96-B15C-E0E9066C6732.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641568234.236045</real>
+			<key>timeStoppedRecording</key>
+			<real>641568339.803123</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>6F7DD9E9-2B9B-4C96-B15C-E0E9066C6732</string>
 		</dict>
 		<key>7170D9BE-390F-4235-A749-4B50F0F8AC7C</key>
 		<dict>
@@ -2794,6 +4154,108 @@
 			<key>uniqueIdentifier</key>
 			<string>719B1B90-D376-4069-A0C2-686F4EFD3D4B</string>
 		</dict>
+		<key>71C87A85-3216-4AA0-A37F-664BA4968ED4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>71C87A85-3216-4AA0-A37F-664BA4968ED4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg5probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641410445.04924703</real>
+			<key>timeStoppedRecording</key>
+			<real>641410547.52365398</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>71C87A85-3216-4AA0-A37F-664BA4968ED4</string>
+		</dict>
+		<key>7255E8E4-8AF1-44EF-B924-B6D4DC9661E6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7255E8E4-8AF1-44EF-B924-B6D4DC9661E6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641670900.41332996</real>
+			<key>timeStoppedRecording</key>
+			<real>641670937.46263504</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>7255E8E4-8AF1-44EF-B924-B6D4DC9661E6</string>
+		</dict>
+		<key>72A6515C-65DB-441C-A0D8-F2512135E2B7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>72A6515C-65DB-441C-A0D8-F2512135E2B7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641636103.73180604</real>
+			<key>timeStoppedRecording</key>
+			<real>641636139.17947698</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>72A6515C-65DB-441C-A0D8-F2512135E2B7</string>
+		</dict>
 		<key>73ACBFC5-E5A1-48E5-A5CD-94B216676096</key>
 		<dict>
 			<key>className</key>
@@ -2827,6 +4289,74 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>73ACBFC5-E5A1-48E5-A5CD-94B216676096</string>
+		</dict>
+		<key>766B0D02-E26B-4C14-BD2F-D5446E25CDD0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>766B0D02-E26B-4C14-BD2F-D5446E25CDD0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641740745.79656804</real>
+			<key>timeStoppedRecording</key>
+			<real>641740757.52551997</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>766B0D02-E26B-4C14-BD2F-D5446E25CDD0</string>
+		</dict>
+		<key>7740C221-5338-4047-B645-3621E91F1078</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7740C221-5338-4047-B645-3621E91F1078.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641736224.03655005</real>
+			<key>timeStoppedRecording</key>
+			<real>641736245.23099101</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>7740C221-5338-4047-B645-3621E91F1078</string>
 		</dict>
 		<key>78DD9CA3-89BE-477A-A2B2-21F4CD744E07</key>
 		<dict>
@@ -2930,6 +4460,40 @@
 			<key>uniqueIdentifier</key>
 			<string>797D40D6-AC27-4618-9C5B-1864F6F04CF7</string>
 		</dict>
+		<key>79C25115-A846-4E8E-BBD9-26748E68FB1A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>79C25115-A846-4E8E-BBD9-26748E68FB1A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641631249.42576301</real>
+			<key>timeStoppedRecording</key>
+			<real>641631386.47194302</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>79C25115-A846-4E8E-BBD9-26748E68FB1A</string>
+		</dict>
 		<key>7A88D78C-6DEB-41E6-90DB-FF54D0F13158</key>
 		<dict>
 			<key>className</key>
@@ -2963,6 +4527,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>7A88D78C-6DEB-41E6-90DB-FF54D0F13158</string>
+		</dict>
+		<key>7B8A59B4-EDAB-4707-8CEF-BF049415A2C5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7B8A59B4-EDAB-4707-8CEF-BF049415A2C5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641733337.585428</real>
+			<key>timeStoppedRecording</key>
+			<real>641733820.56380296</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>7B8A59B4-EDAB-4707-8CEF-BF049415A2C5</string>
 		</dict>
 		<key>7BAD2F2D-9FE3-4BC5-9BA5-92BA202E3EBF</key>
 		<dict>
@@ -3065,6 +4663,74 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>7EBBCA01-9DB7-4B7F-B248-A05E0A6585FD</string>
+		</dict>
+		<key>7F046F90-BA25-4341-A581-A6E6FC0F8CBD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7F046F90-BA25-4341-A581-A6E6FC0F8CBD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641575057.919451</real>
+			<key>timeStoppedRecording</key>
+			<real>641575131.94594502</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>7F046F90-BA25-4341-A581-A6E6FC0F8CBD</string>
+		</dict>
+		<key>7F1795B4-E48F-4402-9FA6-9DAA7C6545D2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7F1795B4-E48F-4402-9FA6-9DAA7C6545D2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641634871.19177699</real>
+			<key>timeStoppedRecording</key>
+			<real>641634908.06585395</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>7F1795B4-E48F-4402-9FA6-9DAA7C6545D2</string>
 		</dict>
 		<key>7FBDEF3E-C622-42B9-B002-2B9ECB6E1358</key>
 		<dict>
@@ -3270,6 +4936,108 @@
 			<key>uniqueIdentifier</key>
 			<string>856D56A6-57EF-4A23-80FB-84EF47003BE3</string>
 		</dict>
+		<key>85E8752E-C657-4588-BE61-E53E4B9D4F6D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>85E8752E-C657-4588-BE61-E53E4B9D4F6D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641426669.09863305</real>
+			<key>timeStoppedRecording</key>
+			<real>641426679.62029195</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>85E8752E-C657-4588-BE61-E53E4B9D4F6D</string>
+		</dict>
+		<key>86373A76-99FB-44AE-91F8-46BA0CD84533</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>86373A76-99FB-44AE-91F8-46BA0CD84533.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641721095.11021495</real>
+			<key>timeStoppedRecording</key>
+			<real>641721104.25556302</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>86373A76-99FB-44AE-91F8-46BA0CD84533</string>
+		</dict>
+		<key>86EC3FA4-59E5-4C31-B9BF-F5BDC56698CB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>86EC3FA4-59E5-4C31-B9BF-F5BDC56698CB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641419729.60130095</real>
+			<key>timeStoppedRecording</key>
+			<real>641419844.17995</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>86EC3FA4-59E5-4C31-B9BF-F5BDC56698CB</string>
+		</dict>
 		<key>86EF4E77-282E-4C47-882E-67096C3BC6A8</key>
 		<dict>
 			<key>className</key>
@@ -3338,6 +5106,142 @@
 			<key>uniqueIdentifier</key>
 			<string>871FD488-8887-414A-969C-429929535BF6</string>
 		</dict>
+		<key>873A27BC-0C86-4FF6-8202-FECC5C961BF4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>873A27BC-0C86-4FF6-8202-FECC5C961BF4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641727844.31371605</real>
+			<key>timeStoppedRecording</key>
+			<real>641727914.686252</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>873A27BC-0C86-4FF6-8202-FECC5C961BF4</string>
+		</dict>
+		<key>889C5C1E-6474-408F-A2E5-E15D37A19781</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>889C5C1E-6474-408F-A2E5-E15D37A19781.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641721005.51924098</real>
+			<key>timeStoppedRecording</key>
+			<real>641721039.12132096</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>889C5C1E-6474-408F-A2E5-E15D37A19781</string>
+		</dict>
+		<key>8939F268-7DEB-4BB1-83DB-437B790877B2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8939F268-7DEB-4BB1-83DB-437B790877B2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641772262.96569002</real>
+			<key>timeStoppedRecording</key>
+			<real>641772757.48566401</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>8939F268-7DEB-4BB1-83DB-437B790877B2</string>
+		</dict>
+		<key>8C7C91C0-D0AB-47AF-AAC6-3327EA6C347F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8C7C91C0-D0AB-47AF-AAC6-3327EA6C347F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641700482.586339</real>
+			<key>timeStoppedRecording</key>
+			<real>641700519.19735301</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>8C7C91C0-D0AB-47AF-AAC6-3327EA6C347F</string>
+		</dict>
 		<key>8DCF6F23-3FF0-447E-B7EB-DAC210F18857</key>
 		<dict>
 			<key>className</key>
@@ -3371,6 +5275,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>8DCF6F23-3FF0-447E-B7EB-DAC210F18857</string>
+		</dict>
+		<key>8DF0005B-90C0-427C-AB9E-C732915E266D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8DF0005B-90C0-427C-AB9E-C732915E266D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641720879.587623</real>
+			<key>timeStoppedRecording</key>
+			<real>641720915.89536202</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>8DF0005B-90C0-427C-AB9E-C732915E266D</string>
 		</dict>
 		<key>8F1A7D2C-27C8-4540-83E7-DD6D9DE3A78B</key>
 		<dict>
@@ -3440,6 +5378,40 @@
 			<key>uniqueIdentifier</key>
 			<string>91594A94-65DD-471E-8C14-0FFDA8BB8415</string>
 		</dict>
+		<key>91E55D50-AFF8-4440-9611-6D44905101D0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>91E55D50-AFF8-4440-9611-6D44905101D0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641737279.85821605</real>
+			<key>timeStoppedRecording</key>
+			<real>641737417.77955794</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>91E55D50-AFF8-4440-9611-6D44905101D0</string>
+		</dict>
 		<key>93DE3130-32E6-4AB4-BE22-6C2433F008D8</key>
 		<dict>
 			<key>className</key>
@@ -3474,6 +5446,40 @@
 			<key>uniqueIdentifier</key>
 			<string>93DE3130-32E6-4AB4-BE22-6C2433F008D8</string>
 		</dict>
+		<key>95063C40-BF4F-48A1-AC26-653E3DA23CE8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>95063C40-BF4F-48A1-AC26-653E3DA23CE8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641570409.92336094</real>
+			<key>timeStoppedRecording</key>
+			<real>641570527.47764802</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>95063C40-BF4F-48A1-AC26-653E3DA23CE8</string>
+		</dict>
 		<key>9595E2AD-7624-4FD0-A3DC-A35BCD237344</key>
 		<dict>
 			<key>className</key>
@@ -3507,6 +5513,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>9595E2AD-7624-4FD0-A3DC-A35BCD237344</string>
+		</dict>
+		<key>9782B14F-947C-47B5-8856-A624030DEBC7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9782B14F-947C-47B5-8856-A624030DEBC7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641722310.01165295</real>
+			<key>timeStoppedRecording</key>
+			<real>641722338.80855703</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>9782B14F-947C-47B5-8856-A624030DEBC7</string>
 		</dict>
 		<key>97E2D514-AF1A-4EDE-93A5-D2718B511357</key>
 		<dict>
@@ -3575,6 +5615,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>98B2C3BB-71E9-4362-8157-07EB9ACC5C0E</string>
+		</dict>
+		<key>9BADE9E7-790D-4ADA-ADDE-37A732F2DDAE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9BADE9E7-790D-4ADA-ADDE-37A732F2DDAE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641766993.53555202</real>
+			<key>timeStoppedRecording</key>
+			<real>641767059.55144703</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>9BADE9E7-790D-4ADA-ADDE-37A732F2DDAE</string>
 		</dict>
 		<key>9C5F4C0A-F134-4F0D-9D6C-4F3EA7F047DB</key>
 		<dict>
@@ -3746,6 +5820,40 @@
 			<key>uniqueIdentifier</key>
 			<string>9FF539E1-0F9F-4C2A-A14B-25957ACAE550</string>
 		</dict>
+		<key>A0096CAC-4257-4C63-87A0-5E3BD138D205</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A0096CAC-4257-4C63-87A0-5E3BD138D205.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641721456.05041599</real>
+			<key>timeStoppedRecording</key>
+			<real>641721490.41902399</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>A0096CAC-4257-4C63-87A0-5E3BD138D205</string>
+		</dict>
 		<key>A0206460-FDB3-4A1D-8019-775E0DAE075E</key>
 		<dict>
 			<key>className</key>
@@ -3780,6 +5888,74 @@
 			<key>uniqueIdentifier</key>
 			<string>A0206460-FDB3-4A1D-8019-775E0DAE075E</string>
 		</dict>
+		<key>A2CF6BAF-DF17-4691-A73B-93ABD05DDAD1</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A2CF6BAF-DF17-4691-A73B-93ABD05DDAD1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641569914.73662901</real>
+			<key>timeStoppedRecording</key>
+			<real>641570031.57304096</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>A2CF6BAF-DF17-4691-A73B-93ABD05DDAD1</string>
+		</dict>
+		<key>A3B52F40-6910-481C-ABA4-C7AFFA3BDA81</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A3B52F40-6910-481C-ABA4-C7AFFA3BDA81.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641671025.36066997</real>
+			<key>timeStoppedRecording</key>
+			<real>641671061.42635202</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>A3B52F40-6910-481C-ABA4-C7AFFA3BDA81</string>
+		</dict>
 		<key>A40C6379-008B-4589-AB86-72A8103A0A90</key>
 		<dict>
 			<key>className</key>
@@ -3813,6 +5989,74 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>A40C6379-008B-4589-AB86-72A8103A0A90</string>
+		</dict>
+		<key>A55F2B9E-B9D2-4698-8CDE-84A595B9F764</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A55F2B9E-B9D2-4698-8CDE-84A595B9F764.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg5probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641426845.14635396</real>
+			<key>timeStoppedRecording</key>
+			<real>641426855.52903903</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>A55F2B9E-B9D2-4698-8CDE-84A595B9F764</string>
+		</dict>
+		<key>A6661C08-65B3-4B8D-84A6-9264DB176135</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A6661C08-65B3-4B8D-84A6-9264DB176135.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641567322.58425999</real>
+			<key>timeStoppedRecording</key>
+			<real>641567555.16789103</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>A6661C08-65B3-4B8D-84A6-9264DB176135</string>
 		</dict>
 		<key>A6FABF2B-ACAA-43BE-A489-7EB91A0C0092</key>
 		<dict>
@@ -3882,6 +6126,40 @@
 			<key>uniqueIdentifier</key>
 			<string>A985DCE9-FA5A-4E2A-8104-0F696F437EB6</string>
 		</dict>
+		<key>AC654452-FF92-4589-B64C-70CCE7EDCCCD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AC654452-FF92-4589-B64C-70CCE7EDCCCD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641739436.56146002</real>
+			<key>timeStoppedRecording</key>
+			<real>641739586.50660801</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>AC654452-FF92-4589-B64C-70CCE7EDCCCD</string>
+		</dict>
 		<key>ADCA602C-B360-4273-8CFE-F7F4D9D053E7</key>
 		<dict>
 			<key>className</key>
@@ -3949,6 +6227,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>B09AADD7-6E5B-4A21-9CD6-A4A5666BCA34</string>
+		</dict>
+		<key>B0EBF158-FEC3-4740-8CAE-46EB4A892254</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B0EBF158-FEC3-4740-8CAE-46EB4A892254.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641633065.83646202</real>
+			<key>timeStoppedRecording</key>
+			<real>641633172.22665906</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>B0EBF158-FEC3-4740-8CAE-46EB4A892254</string>
 		</dict>
 		<key>B147B54A-F8F2-4C32-AFBD-43FDF0711A63</key>
 		<dict>
@@ -4052,6 +6364,74 @@
 			<key>uniqueIdentifier</key>
 			<string>B40A992E-6EA9-45AC-90B0-D32B2351434B</string>
 		</dict>
+		<key>B45CEDC1-142E-4157-BB00-70841167E42A</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B45CEDC1-142E-4157-BB00-70841167E42A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641731732.22107995</real>
+			<key>timeStoppedRecording</key>
+			<real>641731767.58904803</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>B45CEDC1-142E-4157-BB00-70841167E42A</string>
+		</dict>
+		<key>B6321E39-FFA2-4BB2-A89B-4F54BAB6D91E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B6321E39-FFA2-4BB2-A89B-4F54BAB6D91E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641635733.837749</real>
+			<key>timeStoppedRecording</key>
+			<real>641635772.27711999</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>B6321E39-FFA2-4BB2-A89B-4F54BAB6D91E</string>
+		</dict>
 		<key>B979159C-D21B-4A40-A87C-6D820C7FF717</key>
 		<dict>
 			<key>className</key>
@@ -4085,6 +6465,108 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>B979159C-D21B-4A40-A87C-6D820C7FF717</string>
+		</dict>
+		<key>B9ABBEB2-1160-4958-9B6B-C3DF0EADFE63</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B9ABBEB2-1160-4958-9B6B-C3DF0EADFE63.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641724316.77725601</real>
+			<key>timeStoppedRecording</key>
+			<real>641724395.86525702</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>B9ABBEB2-1160-4958-9B6B-C3DF0EADFE63</string>
+		</dict>
+		<key>BA02BC58-CEB6-4559-9F1E-493441DA895F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BA02BC58-CEB6-4559-9F1E-493441DA895F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641721821.37813699</real>
+			<key>timeStoppedRecording</key>
+			<real>641721852.55243504</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>BA02BC58-CEB6-4559-9F1E-493441DA895F</string>
+		</dict>
+		<key>BA060AF1-D7CE-4CBD-9267-F831AD57F2D5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BA060AF1-D7CE-4CBD-9267-F831AD57F2D5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641740969.94977999</real>
+			<key>timeStoppedRecording</key>
+			<real>641740987.00540197</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>BA060AF1-D7CE-4CBD-9267-F831AD57F2D5</string>
 		</dict>
 		<key>BA08858C-130F-458E-8D0D-F5FD2408A086</key>
 		<dict>
@@ -4256,6 +6738,40 @@
 			<key>uniqueIdentifier</key>
 			<string>BBA830A0-39F3-49C9-95E1-ACB4B62550A7</string>
 		</dict>
+		<key>BE8EFC73-33EA-46FC-95B3-FB0E6A0406C1</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BE8EFC73-33EA-46FC-95B3-FB0E6A0406C1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg5probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641398089.733325</real>
+			<key>timeStoppedRecording</key>
+			<real>641398218.27769601</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>BE8EFC73-33EA-46FC-95B3-FB0E6A0406C1</string>
+		</dict>
 		<key>BECE6C48-D4C0-474D-8A8D-09BC22210668</key>
 		<dict>
 			<key>className</key>
@@ -4324,6 +6840,40 @@
 			<key>uniqueIdentifier</key>
 			<string>BF0E6264-62F5-4FDD-BD94-9875FFE2BF22</string>
 		</dict>
+		<key>BFB2AE64-AA6C-43F7-A7AC-7A9C60E0407D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BFB2AE64-AA6C-43F7-A7AC-7A9C60E0407D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg5probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641316727.85265398</real>
+			<key>timeStoppedRecording</key>
+			<real>641316859.53713405</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>BFB2AE64-AA6C-43F7-A7AC-7A9C60E0407D</string>
+		</dict>
 		<key>BFFF5A77-36A5-4FC5-A97C-EB671913CC25</key>
 		<dict>
 			<key>className</key>
@@ -4358,6 +6908,40 @@
 			<key>uniqueIdentifier</key>
 			<string>BFFF5A77-36A5-4FC5-A97C-EB671913CC25</string>
 		</dict>
+		<key>C0B7F81C-E930-4D23-940E-7CB5850A923F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C0B7F81C-E930-4D23-940E-7CB5850A923F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg5probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641410674.80426705</real>
+			<key>timeStoppedRecording</key>
+			<real>641410789.71252298</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>C0B7F81C-E930-4D23-940E-7CB5850A923F</string>
+		</dict>
 		<key>C11E5727-A0BB-4BE1-B5FE-AF8FEDAC75E9</key>
 		<dict>
 			<key>className</key>
@@ -4391,6 +6975,74 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>C11E5727-A0BB-4BE1-B5FE-AF8FEDAC75E9</string>
+		</dict>
+		<key>C4975234-E56F-4173-BD18-1A5211A4CD98</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C4975234-E56F-4173-BD18-1A5211A4CD98.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641633373.81011105</real>
+			<key>timeStoppedRecording</key>
+			<real>641633381.01933098</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>C4975234-E56F-4173-BD18-1A5211A4CD98</string>
+		</dict>
+		<key>C4EABD81-0573-4B56-8AED-4F6DB459C160</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C4EABD81-0573-4B56-8AED-4F6DB459C160.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641633544.92474902</real>
+			<key>timeStoppedRecording</key>
+			<real>641633584.27654803</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>C4EABD81-0573-4B56-8AED-4F6DB459C160</string>
 		</dict>
 		<key>C514C8AF-C7A9-424F-91C5-DAB5669100F7</key>
 		<dict>
@@ -4460,6 +7112,74 @@
 			<key>uniqueIdentifier</key>
 			<string>C8DC0123-2902-4587-95E5-8842C312BEE9</string>
 		</dict>
+		<key>C909F1FC-8812-493F-89BD-4F7B3F722187</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C909F1FC-8812-493F-89BD-4F7B3F722187.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641736970.81479394</real>
+			<key>timeStoppedRecording</key>
+			<real>641736988.48026896</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>C909F1FC-8812-493F-89BD-4F7B3F722187</string>
+		</dict>
+		<key>C9576C30-5AFE-4E82-99C4-007CD27A3C29</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C9576C30-5AFE-4E82-99C4-007CD27A3C29.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641630276.38453603</real>
+			<key>timeStoppedRecording</key>
+			<real>641630407.12175405</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>C9576C30-5AFE-4E82-99C4-007CD27A3C29</string>
+		</dict>
 		<key>C963CDB2-20D3-457C-A116-C89071B05ADF</key>
 		<dict>
 			<key>className</key>
@@ -4528,6 +7248,40 @@
 			<key>uniqueIdentifier</key>
 			<string>CB117A0C-8642-4228-996D-DAD1EEB06836</string>
 		</dict>
+		<key>CD2A0781-51DC-486D-AC50-59A32323C120</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CD2A0781-51DC-486D-AC50-59A32323C120.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641762165.75973904</real>
+			<key>timeStoppedRecording</key>
+			<real>641762238.36769903</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>CD2A0781-51DC-486D-AC50-59A32323C120</string>
+		</dict>
 		<key>CDC1DE14-399A-45A8-B47F-15F53C5B99FB</key>
 		<dict>
 			<key>className</key>
@@ -4562,6 +7316,40 @@
 			<key>uniqueIdentifier</key>
 			<string>CDC1DE14-399A-45A8-B47F-15F53C5B99FB</string>
 		</dict>
+		<key>CDFAA5F9-13EC-4FD8-BDA0-063F995E8849</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CDFAA5F9-13EC-4FD8-BDA0-063F995E8849.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641772109.80918097</real>
+			<key>timeStoppedRecording</key>
+			<real>641772130.48900998</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>CDFAA5F9-13EC-4FD8-BDA0-063F995E8849</string>
+		</dict>
 		<key>CF2BD491-A375-4189-8C44-53E130FA649F</key>
 		<dict>
 			<key>className</key>
@@ -4595,6 +7383,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>CF2BD491-A375-4189-8C44-53E130FA649F</string>
+		</dict>
+		<key>D080ADB7-8BA8-40F7-B3C5-1D7E329F6AA9</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D080ADB7-8BA8-40F7-B3C5-1D7E329F6AA9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641741754.76527703</real>
+			<key>timeStoppedRecording</key>
+			<real>641741771.57841504</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>D080ADB7-8BA8-40F7-B3C5-1D7E329F6AA9</string>
 		</dict>
 		<key>D09F484C-3F66-42E8-92BB-2C32EBCDCA8E</key>
 		<dict>
@@ -4698,6 +7520,74 @@
 			<key>uniqueIdentifier</key>
 			<string>D3D1007A-09F8-467C-BB68-8FAAE2A2A776</string>
 		</dict>
+		<key>D44EA484-BEA0-4202-90CE-F0BFBCE52049</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D44EA484-BEA0-4202-90CE-F0BFBCE52049.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641632311.69566905</real>
+			<key>timeStoppedRecording</key>
+			<real>641632410.05220199</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>D44EA484-BEA0-4202-90CE-F0BFBCE52049</string>
+		</dict>
+		<key>D48AF1C2-665F-422B-A1CC-977D3D6425D5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D48AF1C2-665F-422B-A1CC-977D3D6425D5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg5probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641317356.479074</real>
+			<key>timeStoppedRecording</key>
+			<real>641317418.67146802</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>D48AF1C2-665F-422B-A1CC-977D3D6425D5</string>
+		</dict>
 		<key>D49B31E2-1C62-4C61-89E0-5A54BA8A49AC</key>
 		<dict>
 			<key>className</key>
@@ -4800,6 +7690,74 @@
 			<key>uniqueIdentifier</key>
 			<string>D6D54D9F-518D-4D86-AC23-F134FD9D5EB8</string>
 		</dict>
+		<key>D7155CD0-066F-4750-AF84-16F6A248301D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D7155CD0-066F-4750-AF84-16F6A248301D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641633468.54646206</real>
+			<key>timeStoppedRecording</key>
+			<real>641633476.06815696</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>D7155CD0-066F-4750-AF84-16F6A248301D</string>
+		</dict>
+		<key>D8E4C460-5000-4CE0-A331-2C10633F3FE2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D8E4C460-5000-4CE0-A331-2C10633F3FE2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641740003.61981499</real>
+			<key>timeStoppedRecording</key>
+			<real>641740157.29561698</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>D8E4C460-5000-4CE0-A331-2C10633F3FE2</string>
+		</dict>
 		<key>DAF0A217-8C7C-4DFE-BF7A-3B07A04DD571</key>
 		<dict>
 			<key>className</key>
@@ -4868,6 +7826,40 @@
 			<key>uniqueIdentifier</key>
 			<string>DBDB4458-A1DC-4BC6-8FBB-3D2A15B9C687</string>
 		</dict>
+		<key>DE8BE93E-5753-49C8-A6EA-63B7C6AE1A75</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DE8BE93E-5753-49C8-A6EA-63B7C6AE1A75.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641419335.81707394</real>
+			<key>timeStoppedRecording</key>
+			<real>641419471.05915594</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>DE8BE93E-5753-49C8-A6EA-63B7C6AE1A75</string>
+		</dict>
 		<key>DF6011A3-1AB1-4E0A-882E-717B20517B44</key>
 		<dict>
 			<key>className</key>
@@ -4902,6 +7894,40 @@
 			<key>uniqueIdentifier</key>
 			<string>DF6011A3-1AB1-4E0A-882E-717B20517B44</string>
 		</dict>
+		<key>DF8E4A8D-B187-4556-A21E-2A1C644AD032</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DF8E4A8D-B187-4556-A21E-2A1C644AD032.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641632047.65301204</real>
+			<key>timeStoppedRecording</key>
+			<real>641632148.51801205</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>DF8E4A8D-B187-4556-A21E-2A1C644AD032</string>
+		</dict>
 		<key>DFB905D9-A26D-4D5B-8D59-530F8C20099F</key>
 		<dict>
 			<key>className</key>
@@ -4935,6 +7961,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>DFB905D9-A26D-4D5B-8D59-530F8C20099F</string>
+		</dict>
+		<key>E06E9986-FE91-429D-B9A1-54C2D35FA136</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E06E9986-FE91-429D-B9A1-54C2D35FA136.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641735717.07960606</real>
+			<key>timeStoppedRecording</key>
+			<real>641736060.52165699</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>E06E9986-FE91-429D-B9A1-54C2D35FA136</string>
 		</dict>
 		<key>E14137E6-27AB-463E-BBEE-FBCB3FEB12A9</key>
 		<dict>
@@ -5140,6 +8200,40 @@
 			<key>uniqueIdentifier</key>
 			<string>E4DD6D35-1B70-49C7-B393-1B4578F15B7E</string>
 		</dict>
+		<key>E5827D91-A6A8-4FAA-8CC2-1D3994A62654</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E5827D91-A6A8-4FAA-8CC2-1D3994A62654.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641763265.69532704</real>
+			<key>timeStoppedRecording</key>
+			<real>641763335.37381005</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>E5827D91-A6A8-4FAA-8CC2-1D3994A62654</string>
+		</dict>
 		<key>E5F728D4-87A1-4142-8580-F660C2A6D019</key>
 		<dict>
 			<key>className</key>
@@ -5241,6 +8335,74 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>E760AE48-9CE1-48B2-A7ED-9883D2F522D3</string>
+		</dict>
+		<key>E7B62F6F-8936-49D7-8772-4955811547F8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E7B62F6F-8936-49D7-8772-4955811547F8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641668590.348737</real>
+			<key>timeStoppedRecording</key>
+			<real>641668627.03275204</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>E7B62F6F-8936-49D7-8772-4955811547F8</string>
+		</dict>
+		<key>E90EA2F6-EDFB-4DB0-BD00-5D11E8782747</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E90EA2F6-EDFB-4DB0-BD00-5D11E8782747.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641736649.67794096</real>
+			<key>timeStoppedRecording</key>
+			<real>641736670.34018505</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>E90EA2F6-EDFB-4DB0-BD00-5D11E8782747</string>
 		</dict>
 		<key>E945F6D1-CF32-49D8-A1E1-B1F5ED0C5FBF</key>
 		<dict>
@@ -5344,6 +8506,74 @@
 			<key>uniqueIdentifier</key>
 			<string>EA761043-1D0A-42E1-BCBF-D07937F8308F</string>
 		</dict>
+		<key>EB745AF2-C7B8-4F51-9272-C885499B4628</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EB745AF2-C7B8-4F51-9272-C885499B4628.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641737198.705338</real>
+			<key>timeStoppedRecording</key>
+			<real>641737216.67383802</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>EB745AF2-C7B8-4F51-9272-C885499B4628</string>
+		</dict>
+		<key>EDC43E84-B371-4727-9E78-B7C748FA1E79</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EDC43E84-B371-4727-9E78-B7C748FA1E79.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641411244.60932195</real>
+			<key>timeStoppedRecording</key>
+			<real>641411374.18165505</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>EDC43E84-B371-4727-9E78-B7C748FA1E79</string>
+		</dict>
 		<key>EE71FF0A-7B66-4E88-BEB4-99F8E0EDCDD3</key>
 		<dict>
 			<key>className</key>
@@ -5377,6 +8607,108 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>EE71FF0A-7B66-4E88-BEB4-99F8E0EDCDD3</string>
+		</dict>
+		<key>EE7B5C11-1B80-4B60-A9C8-C780D86BD7E7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EE7B5C11-1B80-4B60-A9C8-C780D86BD7E7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641742584.36280501</real>
+			<key>timeStoppedRecording</key>
+			<real>641742601.512959</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>EE7B5C11-1B80-4B60-A9C8-C780D86BD7E7</string>
+		</dict>
+		<key>EEFCA9F1-A927-4D25-88C8-592688B9DEDA</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EEFCA9F1-A927-4D25-88C8-592688B9DEDA.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641724199.15727794</real>
+			<key>timeStoppedRecording</key>
+			<real>641724207.72496903</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>EEFCA9F1-A927-4D25-88C8-592688B9DEDA</string>
+		</dict>
+		<key>EF1C3F3C-1A09-4BB2-ABB4-83E1AE339B05</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EF1C3F3C-1A09-4BB2-ABB4-83E1AE339B05.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641740166.64715803</real>
+			<key>timeStoppedRecording</key>
+			<real>641740173.68809998</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>EF1C3F3C-1A09-4BB2-ABB4-83E1AE339B05</string>
 		</dict>
 		<key>F016C99C-2790-49F4-A025-3692A0427980</key>
 		<dict>
@@ -5480,6 +8812,74 @@
 			<key>uniqueIdentifier</key>
 			<string>F283219C-DCE3-4C7B-9CF5-20335417C05D</string>
 		</dict>
+		<key>F2C7A352-0DB9-42B3-8878-A944B03376B2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F2C7A352-0DB9-42B3-8878-A944B03376B2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641767153.52748406</real>
+			<key>timeStoppedRecording</key>
+			<real>641767215.91672897</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>F2C7A352-0DB9-42B3-8878-A944B03376B2</string>
+		</dict>
+		<key>F35C17E9-EF4D-47C1-8B6F-C2A29F856B77</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F35C17E9-EF4D-47C1-8B6F-C2A29F856B77.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641721642.615453</real>
+			<key>timeStoppedRecording</key>
+			<real>641721674.93901706</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>F35C17E9-EF4D-47C1-8B6F-C2A29F856B77</string>
+		</dict>
 		<key>F417A8BF-5623-4C16-ADCD-38FA8F823AFF</key>
 		<dict>
 			<key>className</key>
@@ -5513,6 +8913,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>F417A8BF-5623-4C16-ADCD-38FA8F823AFF</string>
+		</dict>
+		<key>F434CC4D-F37D-4CCC-9DFF-958022FB317E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F434CC4D-F37D-4CCC-9DFF-958022FB317E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641740426.27984703</real>
+			<key>timeStoppedRecording</key>
+			<real>641740493.73863006</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>F434CC4D-F37D-4CCC-9DFF-958022FB317E</string>
 		</dict>
 		<key>F5AAF243-BC30-4B34-97C4-8F0292CEFCD7</key>
 		<dict>
@@ -5548,6 +8982,74 @@
 			<key>uniqueIdentifier</key>
 			<string>F5AAF243-BC30-4B34-97C4-8F0292CEFCD7</string>
 		</dict>
+		<key>F72F3C5D-FB5E-48F7-AE4F-6627659FBE84</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F72F3C5D-FB5E-48F7-AE4F-6627659FBE84.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641724124.17294204</real>
+			<key>timeStoppedRecording</key>
+			<real>641724154.37209797</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>F72F3C5D-FB5E-48F7-AE4F-6627659FBE84</string>
+		</dict>
+		<key>F8A70800-15DB-466D-A498-A9379985040F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F8A70800-15DB-466D-A498-A9379985040F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641427128.86696804</real>
+			<key>timeStoppedRecording</key>
+			<real>641427138.86024296</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>F8A70800-15DB-466D-A498-A9379985040F</string>
+		</dict>
 		<key>F94725F1-8F53-4534-AAFA-81C152A64B5C</key>
 		<dict>
 			<key>className</key>
@@ -5581,6 +9083,40 @@
 			<string>Run hmmpred</string>
 			<key>uniqueIdentifier</key>
 			<string>F94725F1-8F53-4534-AAFA-81C152A64B5C</string>
+		</dict>
+		<key>FAB1B1A3-951B-4E12-9936-179B457427A0</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FAB1B1A3-951B-4E12-9936-179B457427A0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>hmmpred project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Copy of hmmpredg4probs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>0</integer>
+			<key>signature</key>
+			<string>Run hmmpred</string>
+			<key>timeStartedRecording</key>
+			<real>641635989.07118702</real>
+			<key>timeStoppedRecording</key>
+			<real>641636026.49665201</real>
+			<key>title</key>
+			<string>Run hmmpred</string>
+			<key>uniqueIdentifier</key>
+			<string>FAB1B1A3-951B-4E12-9936-179B457427A0</string>
 		</dict>
 		<key>FB6494DE-4E6B-4ADA-A8FC-C283EA39FE35</key>
 		<dict>

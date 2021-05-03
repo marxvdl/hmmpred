@@ -338,10 +338,13 @@ vector<byte> Hmm::predict(vector<byte>& originalSeq, vector<byte> &secondarySeq,
             break;
         case 2:
             insideOutsideV2(seq);
+            break;
         case 3:
             insideOutsideV3(seq);
+            break;
         case 4 :
             insideOutsideV4(seq);
+            break;
         case 5 :
             insideOutsideV5(seq);
     }
