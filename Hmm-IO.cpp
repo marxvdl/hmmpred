@@ -2118,12 +2118,11 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
 
 }
 
-void Hmm::insideOutsideV3(vector<byte>& seq){
-       uint fullLength = (uint) seq.size();
-    uint windowedLength = fullLength - windowSize + 2;
 
-//    vector<real> transProb(numberOfFragments, 0.0);
-    
+void Hmm::insideOutsideV3(vector<byte>& seq){
+       
+    uint fullLength = (uint) seq.size();
+    uint windowedLength = fullLength - windowSize + 2;
     
     // SScpair is intended to be the pair of secondary structure symbols
     // at the two central positions of the State fragment.
@@ -2157,7 +2156,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     // Double productions for the same secondary structures: XE-W-EX, XH-W-HX, XC-W-CX.
     // Otherwise first left and then right, E > H > C, no EH or HE.
     
-     // /*
+    //  /*
     byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 2, 0, 0},
                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                               {1, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -2167,7 +2166,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                               {0, 0, 3, 0, 1, 1, 0, 1, 1},
                               {0, 0, 2, 0, 0, 3, 0, 0, 1},
                               {0, 0, 2, 0, 0, 2, 0, 0, 3}};
-      // */
+     //  */
     
     // No double production for XC-W-CX. Always FIRST LEFT and then at right.
     
@@ -2317,29 +2316,36 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                               {3, 3, 3, 3, 3, 3, 3, 3, 3},
                               {3, 3, 3, 3, 3, 3, 3, 3, 3},
                               {3, 3, 3, 3, 3, 3, 3, 3, 3}};
-       */
+        */
     
     
     
     ulint numberOfDoubleStates = numberOfStates * numberOfStates;
-    int numberOfSecondarySymbols2 = numberOfSecondarySymbols*numberOfSecondarySymbols;
-//    ulint numberOfDoubleFragments = numberOfFragments * numberOfFragments;
+//    int numberOfSecondarySymbols2 = numberOfSecondarySymbols*numberOfSecondarySymbols;
+    
+    // map<ulint, ulint> INDEX;
+    unordered_map<ulint, ulint> betaINDEX;
+    
+    ulint maxIndex = 0;
+    for(ulint i = 0; i < numberOfStates; i++){
+        for(ulint j = 0; j < numberOfStates; j++){
+            if(emissionType[SScpair[i]][SScpair[j]]) {
+                ulint doubleindex = i*numberOfStates +j;
+                betaINDEX[doubleindex] = maxIndex;
+                maxIndex ++;
+            }
+        }
+    }
+    
     vector < vector < vector<real> > > alpha(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (numberOfDoubleStates, 0.0)));
-    vector < vector < vector<real> > > beta(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (numberOfDoubleStates, 0.0)));
+  //  vector < vector < vector<real> > > beta(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (numberOfDoubleStates, 0.0)));
     
     
-    vector <real> transProb (numberOfSecondarySymbols, 0.0);
-    real transProb1[numberOfSecondarySymbols];
-    
-    vector < real > transProb2 (numberOfSecondarySymbols2, 0.0);
+ //   vector < vector < vector<real> > > alpha(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (maxIndex, 0.0)));
+    vector < vector < vector<real> > > beta(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (maxIndex, 0.0)));
     
     
- //   vector<real> transLeftProb(numberOfFragments, 0.0);
- //   vector<real> transRightProb(numberOfFragments, 0.0);
- //   vector<real> transDoubleProb(numberOfDoubleFragments, 0.0);
- //   vector<real> probDoubleState(numberOfDoubleStates, 0.0);
-    
-    
+
     
     //
     // 1. Inside
@@ -2361,9 +2367,11 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     
     for(int t=0; t < windowedLength-1; t++){
         for(ulint i=0; i<numberOfFragments; i++){
-            ulint doubleindex = i / numberOfSecondarySymbols * numberOfStates + i % numberOfStates;
+            ulint left = i / numberOfSecondarySymbols;
+            ulint right = i % numberOfStates;
+            ulint doubleindex = left * numberOfStates + right;
             alpha[t][t+1][doubleindex] = probFragment[i] *
-                probFragmentEmitsPrimarySymbol[i][ seq[t+halfWindow] ];
+                        probFragmentEmitsPrimarySymbol[i][ seq[t+halfWindow] ];
         }
         normalize(alpha[t][t+1]);
     }
@@ -2372,53 +2380,36 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     // 1.2 Induction
     //
     for(int v=2; v < windowedLength; v++){
-        
-   
-        /*
-        if(v <= windowedLength - 1) {
-            for(ulint i=0; i<numberOfFragments; i++)
-                transRightProb[i] = probFragment[i] *
-                        probFragmentEmitsPrimarySymbol[i][ seq[v+halfWindow] ];
-                normalize(transRightProb);
-        }
-    */
       
         for (int t=v-2; t >= 0; t--) {
-        
-            /*
-            if(t > 0) {
-                for(ulint i=0; i<numberOfFragments; i++)
-                    transLeftProb[i] = probFragment[i] *
-                        probFragmentEmitsPrimarySymbol[i][ seq[t-1+halfWindow] ];
-                normalize(transLeftProb);
-            }
-             */
             
             for(ulint prevleft=0; prevleft<numberOfStates; prevleft++){
           //      if(probState[prevleft] == 0) continue;
                 for(ulint nextright=0; nextright<numberOfStates; nextright++){
            //         if(probState[nextright] == 0) continue;
+                    
+                    if(! emissionType[SScpair[prevleft]][SScpair[nextright]])
+                        continue;
+                    
                     ulint parentdoubleindex = prevleft * numberOfStates + nextright;
+  //                  ulint indexOfParentdoubleindex = INDEX.at(parentdoubleindex);
                     
                     switch(emissionType[SScpair[prevleft]][SScpair[nextright]])
                     {
                         
                         case 1:
                             for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
+                                
                                 ulint transright = tt * numberOfStates + nextright;
                                 ulint prevright = transright / numberOfSecondarySymbols;
                                 ulint doubleindexright = prevright * numberOfStates + nextright;
-
                                 ulint doubleindex = prevleft*numberOfStates + prevright;
+                                
                                 if(probState[prevright] != 0)
                                 {
-                                 //   ulint parentdoubleindex = nextleft*numberOfStates + nextright;
                                     real probright = alpha[t][v-1][doubleindex] *
                                             alpha[v-1][v][doubleindexright] /
                                             probState[prevright];
-                                  //      transRightProb[transright] /
-                                   //     probState[prevright];
-                                        //probDoubleState[parentdoubleindex];
                                 alpha[t][v][parentdoubleindex] += probright;
                                 }
                             }
@@ -2426,99 +2417,51 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                         
                         case 2:
                             for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
+                                
                                 ulint transleft = prevleft * numberOfSecondarySymbols + ss;
                                 ulint nextleft = transleft % numberOfStates;
                                 ulint doubleindexleft = prevleft*numberOfStates + nextleft;
-                      
                                 ulint doubleindex = nextleft*numberOfStates + nextright;
+                                
                                 if( probState[nextleft] != 0)
-                                   //probDoubleState[parentdoubleindex] != 0)
                                 {
-                              //      ulint parentdoubleindex = prevleft*numberOfStates + prevright;
                                     real probleft = alpha[t+1][v][doubleindex] *
                                         alpha[t][t+1][doubleindexleft] /
-                                      //  transLeftProb[transleft] /
                                         probState[nextleft];
-                                        //probDoubleState[parentdoubleindex];
                                     alpha[t][v][parentdoubleindex] += probleft;
                                 }
                             }
                             break;
                             
                         case 3:
-                            
-                            /*
-                             transProb2.clear();
-                            // transProb2.resize(numberOfSecondarySymbols2, 0.0);
-                            //for (uint i =0; i<numberOfSecondarySymbols2; i++){
-                            //    transProb2[i] = 0.0;
-                            //}
-                            
                             for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                                ulint nextleft = transleft % numberOfStates;
-                                if(probState[nextleft] == 0) continue;
-                                ulint doubleindexleft = prevleft*numberOfStates + nextleft;
-                                        
-                                for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
-                                    ulint transright = tt * numberOfStates + nextright;
-                                    ulint prevright = transright / numberOfSecondarySymbols;
-                                    if(probState[prevright] == 0) continue;
-                                    ulint doubleindexright = prevright * numberOfStates + nextright;
-                             
-                                    int sstt = ss * numberOfSecondarySymbols + tt;
-                                    transProb2[sstt] = alpha[t][t+1][doubleindexleft]
-                                                        * alpha[v-1][v][doubleindexright]
-                                                        / probState[nextleft]
-                                                        / probState[prevright];
-                                }
-                            }
-                            
-                            normalize(transProb2);
-                             */
-                            
-                            for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                                ulint nextleft = transleft % numberOfStates;
-                                if(probState[nextleft] == 0) continue;
-                                ulint doubleindexleft = prevleft*numberOfStates + nextleft;
-                                        
-                                for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
-                                    ulint transright = tt * numberOfStates + nextright;
-                                    ulint prevright = transright / numberOfSecondarySymbols;
-                                    if(probState[prevright] == 0) continue;
-                                    ulint doubleindexright = prevright * numberOfStates + nextright;
                                 
+                                ulint transleft = prevleft * numberOfSecondarySymbols + ss;
+                                ulint nextleft = transleft % numberOfStates;
+                                if(probState[nextleft] == 0) continue;
+                                ulint doubleindexleft = prevleft*numberOfStates + nextleft;
+                                        
+                                for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
+                                    ulint transright = tt * numberOfStates + nextright;
+                                    ulint prevright = transright / numberOfSecondarySymbols;
+                                    if(probState[prevright] == 0) continue;
+                                    
+                                    ulint doubleindexright = prevright * numberOfStates + nextright;
                                     ulint doubleindex = nextleft*numberOfStates + prevright;
-                                    int sstt = ss * numberOfSecondarySymbols + tt;
                                     
                                     if( (v - t) > 2 &&
                                        probState[nextleft] != 0 && probState[prevright] != 0)
-                                   //probDoubleState[parentdoubleindex] != 0)
                                     {
-                                 //   ulint parentdoubleindex = prevleft*numberOfStates + nextright;
-                                  //      real probtrans = alpha[t][t+1][doubleindexleft] *
-                                  //                          alpha[v-1][v][doubleindexright];
                                         real probleftright = alpha[t+1][v-1][doubleindex]
-                                                                * alpha[t][t+1][doubleindexleft]
-                                                                / probState[nextleft]
-                                                                * alpha[v-1][v][doubleindexright]
-                                                                / probState[prevright];
-                                                                    
-                                        
-                                           //                 transProb2[sstt];
-                                         //   probtrans / probState[nextleft] / probState[prevright];
-                                        //
+                                                            * alpha[t][t+1][doubleindexleft]
+                                                            / probState[nextleft]
+                                                            * alpha[v-1][v][doubleindexright]
+                                                            / probState[prevright];
                                     alpha[t][v][parentdoubleindex] += probleftright;
-                                    //    alpha3 += probleftright;
-                                    //    probsum += probtrans;
                                     }
                                 }
                             }
                     }
-                    
-              //      if(emissionType[SScpair[prevleft]][SScpair[nextright]] == 3 && probsum != 0)
-              //          alpha[t][v][parentdoubleindex] += alpha3 / probsum;
                 
                 }
             }
@@ -2542,55 +2485,48 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     //
     
     if(headAndTail){
-        for(ulint i=0; i < numberOfStates; i++)
-            for(ulint j=0; j < numberOfStates; j++)
-                if(emissionType[SScpair[i]][SScpair[j]] > 0)
-                        beta[0][windowedLength-1][i*numberOfStates + j] =
+        for(ulint i=0; i < numberOfStates; i++){
+            for(ulint j=0; j < numberOfStates; j++){
+                if(emissionType[SScpair[i]][SScpair[j]] > 0){
+                    ulint doubleindex = i*numberOfStates + j;
+                    beta[0][windowedLength-1][betaINDEX.at(doubleindex)] =
                             probState_head[i] * probState_tail[j];
+                }
+            }
+        }
     }
     else{
-        for(ulint i=0; i < numberOfStates; i++)
-            for(ulint j=0; j < numberOfStates; j++)
-                if(emissionType[SScpair[i]][SScpair[j]] > 0)
-                        beta[0][windowedLength-1][i*numberOfStates + j] = 1.0;
+        for(ulint i=0; i < numberOfStates; i++){
+            for(ulint j=0; j < numberOfStates; j++){
+                if(emissionType[SScpair[i]][SScpair[j]] > 0){
+                    ulint doubleindex = i*numberOfStates + j;
+                    beta[0][windowedLength-1][betaINDEX.at(doubleindex)] = 1.0;
+                }
+            }
+        }
     }
     normalize(beta[0][windowedLength-1]);
     
     // 2.2 Induction
+    
     for(int t=0; t < windowedLength-1; t++){
-        //int v;
-        
-        /*
-        if(t > 0) {
-            for(ulint i=0; i<numberOfFragments; i++)
-                transLeftProb[i] = probFragment[i] *
-                        probFragmentEmitsPrimarySymbol[i][ seq[t-1+halfWindow] ];
-            normalize(transLeftProb);
-        }
-         */
     
         for (int v=windowedLength-1; v > t; v--){
  
      //       if(t==0 && v==windowedLength-1)
      //           continue;
-            /*
-            if(v < windowedLength - 1) {
-                for(ulint i=0; i<numberOfFragments; i++)
-                    transRightProb[i] = probFragment[i] *
-                            probFragmentEmitsPrimarySymbol[i][ seq[v+halfWindow] ];
-                normalize(transRightProb);
-            }
-            */
             
             for(ulint prevleft=0; prevleft<numberOfStates; prevleft++){
-                
            //     if(probState[prevleft] == 0) continue;
                 
                 for(ulint nextright=0; nextright<numberOfStates; nextright++){
-                
                //     if(probState[nextright] == 0) continue;
                     
+                    if(emissionType[SScpair[prevleft]][SScpair[nextright]] == 0)
+                        continue;
+                    
                     ulint parentdoubleindex = prevleft * numberOfStates + nextright;
+                    ulint indexOfParentdoubleindex = betaINDEX.at(parentdoubleindex);
                     
                     if(emissionType[SScpair[prevleft]][SScpair[nextright]] == 1
                             && v < windowedLength - 1)
@@ -2600,14 +2536,16 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                             ulint transright = tt * numberOfStates + nextright;
                             ulint prevright = transright /  numberOfSecondarySymbols;
                             ulint doubleindexright = prevright * numberOfStates + nextright;
-                             
+                            
+                            if(emissionType[SScpair[prevleft]][SScpair[prevright]] == 0)
+                                continue;
                             ulint doubleindex = prevleft*numberOfStates + prevright;
                             if(probState[nextright] != 0)
                             {
-                                real probright = beta[t][v+1][parentdoubleindex] *
+                                real probright = beta[t][v+1][indexOfParentdoubleindex] *
                                                 alpha[v][v+1][doubleindexright] /
                                                 probState[nextright];
-                                beta[t][v][doubleindex] += probright;
+                                beta[t][v][betaINDEX.at(doubleindex)] += probright;
                             }
                         }
                     }
@@ -2620,14 +2558,16 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                             ulint transleft = prevleft * numberOfSecondarySymbols + ss;
                             ulint nextleft = transleft % numberOfStates;
                             ulint doubleindexleft = prevleft * numberOfStates + nextleft;
-                                  
+                            
+                            if(emissionType[SScpair[nextleft]][SScpair[nextright]] == 0)
+                                continue;
                             ulint doubleindex = nextleft*numberOfStates + nextright;
                             if(probState[prevleft] != 0)
                             {
-                                real probleft = beta[t-1][v][parentdoubleindex] *
+                                real probleft = beta[t-1][v][indexOfParentdoubleindex] *
                                                 alpha[t-1][t][doubleindexleft] /
                                                 probState[prevleft];
-                                beta[t][v][doubleindex] += probleft;
+                                beta[t][v][betaINDEX.at(doubleindex)] += probleft;
                             }
                         }
                     }
@@ -2635,16 +2575,6 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                     else if(emissionType[SScpair[prevleft]][SScpair[nextright]] == 3
                        && t > 0 && v < windowedLength -1)
                     {
-                        
-                        /*
-                        //real probsum = 0;
-                        
-                        //transProb2.clear();
-                        //transProb2.resize(numberOfSecondarySymbols2, 0.0);
-                        for (uint i =0; i<numberOfSecondarySymbols2; i++){
-                            transProb2[i] = 0.0;
-                        }
-                        
                         for(uint ss=0; ss<numberOfSecondarySymbols; ss++)
                         {
                             ulint transleft = prevleft * numberOfSecondarySymbols + ss;
@@ -2656,41 +2586,19 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                 ulint transright = tt * numberOfStates + nextright;
                                 ulint prevright = transright / numberOfSecondarySymbols;
                                 ulint doubleindexright = prevright * numberOfStates + nextright;
-                                int sstt = ss * numberOfSecondarySymbols + tt;
-                                        
-                                transProb2[sstt]= alpha[t-1][t][doubleindexleft]*
-                                                    alpha[v][v+1][doubleindexright] /
-                                                    probState[prevleft] / probState[nextright];
-                            }
-                        }
-                        
-                       // normalize(transProb2);
-                         */
-                                 
-                        for(uint ss=0; ss<numberOfSecondarySymbols; ss++)
-                        {
-                            ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                            ulint nextleft = transleft % numberOfStates;
-                            ulint doubleindexleft = prevleft * numberOfStates + nextleft;
-                                    
-                            for(uint tt=0; tt<numberOfSecondarySymbols; tt++)
-                            {
-                                ulint transright = tt * numberOfStates + nextright;
-                                ulint prevright = transright / numberOfSecondarySymbols;
-                                ulint doubleindexright = prevright * numberOfStates + nextright;
-                                 
+                                
+                                if(emissionType[SScpair[nextleft]][SScpair[prevright]] == 0)
+                                    continue;
                                 ulint doubleindex = nextleft*numberOfStates + prevright;
-                                int sstt = ss * numberOfSecondarySymbols + tt;
                                 
                                 if(probState[prevleft] != 0 && probState[nextright] != 0)
                                 {
-                                    real probleftright =  // transProb2[sstt] *
-                                                        alpha[t-1][t][doubleindexleft] *
+                                    real probleftright =  alpha[t-1][t][doubleindexleft] *
                                                         alpha[v][v+1][doubleindexright] *
-                                                        beta[t-1][v+1][parentdoubleindex] /
+                                                        beta[t-1][v+1][indexOfParentdoubleindex] /
                                                         probState[prevleft] /
-                                                        probState[nextright]; // /probsum ;
-                                    beta[t][v][doubleindex] += probleftright;
+                                                        probState[nextright]; // / probsum;
+                                    beta[t][v][betaINDEX.at(doubleindex)] += probleftright;
                                 }
                             }
                         }
@@ -2705,188 +2613,102 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                         continue;
                     ulint prev = trans / numberOfSecondarySymbols;
                     ulint next = trans % numberOfStates;
+                    if(emissionType[SScpair[prev]][SScpair[next]] == 0)
+                        continue;
                     ulint doubleindex0 = prev * numberOfStates + next;
-                    real probTransRight0 = probFragment[trans] / probState[next];
-                    real probTransLeft0 = probFragment[trans] / probState[prev];
+                    ulint indexOfDoubleindex0 = betaINDEX.at(doubleindex0);
                 
-            // possible production with other possibly long fragments at left of t
-            // current short fragment emits at right
+                    //
+                    // possible production with other possibly long fragments at left of t
+                    // current short fragment emits at right
+                    //
                     
                     for(ulint prevleft = 0; prevleft < numberOfStates; prevleft++){
-                        if(probState[prevleft] == 0)
-                            continue;
-                            
+                        if(probState[prevleft] == 0
+                           || emissionType[SScpair[prevleft]][SScpair[next]] == 0)
+                                continue;
+                        ulint doubleindex2 = prevleft*numberOfStates + next;
+                        ulint indexOfDoubleindex2 = betaINDEX.at(doubleindex2);
+                    
                         if(emissionType[SScpair[prevleft]][SScpair[next]] == 1) {
-                            
-                            ulint doubleindex2 = prevleft*numberOfStates + next;
                             ulint doubleindex1 = prevleft*numberOfStates + prev;
                                 
+                            real deltabeta = 0.0;
                             for(int w = 0; w < t; w++){
-                                real deltabeta = beta[w][v][doubleindex2] *
-                                                alpha[w][t][doubleindex1]
-                                /  probState[prevleft];
-                                            //    * probFragment[trans];
-                                                //probTransRight0;
-                                    beta[t][v][doubleindex0] += deltabeta;
+                                deltabeta += beta[w][v][indexOfDoubleindex2] *
+                                                alpha[w][t][doubleindex1];
                             }
+                                    
+                            beta[t][v][indexOfDoubleindex0] += deltabeta/ probState[prevleft];
                         }
                             
                         if(emissionType[SScpair[prevleft]][SScpair[next]] == 3){
-                            
-                            ulint doubleindex2 = prevleft*numberOfStates + next;
-                            
-                            for(int w = 0; w < t; w++){
-                                
-                                
-                                /*
-                                real probsum = 0.0;
-                                
-                                //transProb.clear();
-                               // transProb.resize(numberOfSecondarySymbols, 0.0);
-                                for (uint ss = 0; ss<numberOfSecondarySymbols; ss++){
-                                    transProb1[ss] = 0.0;
-                                }
-                                
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                                    ulint nextleft = transleft % numberOfStates;
-                                    if(probState[nextleft] == 0) continue;
+                        
+                            for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
+                                ulint transleft = prevleft * numberOfSecondarySymbols + ss;
+                                ulint nextleft = transleft % numberOfStates;
+                                if(probState[nextleft] == 0) continue;
                                     
-                                    ulint doubleindex1 = nextleft* numberOfStates + prev;
-                                    ulint doubleindex3 = prevleft*numberOfStates + nextleft;
-                                    
-                                    transProb1[ss] = alpha[w][w+1][doubleindex3]
-                                                            * probFragment[trans]
-                                                            / probState[prevleft];
-                                    probsum += transProb1[ss];
-                                  //  probsum += alpha[w][w+1][doubleindex3] * probFragment[trans];
+                                ulint doubleindex1 = nextleft * numberOfStates + prev;
+                                ulint doubleindex3 = prevleft * numberOfStates + nextleft;
+                                
+                                real deltabeta = 0.0;
+                                for(int w = 0; w < t; w++){
+                                    deltabeta += beta[w][v][indexOfDoubleindex2]
+                                                    * alpha[w][w+1][doubleindex3]
+                                                    * alpha[w+1][t][doubleindex1];
                                 }
-                                
-                                //normalize(transProb);
-                                
-                             //   for(uint ss = 0; ss < numberOfSecondarySymbols; ss++){
-                             //       transProb1[ss] /= probsum;
-                             //   }
-                                
-                                
-                                // probsum /= probState[prevleft];
-                                 */
-                            
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                                    ulint nextleft = transleft % numberOfStates;
-                                    if(probState[nextleft] == 0) continue;
-                                    
-                                    ulint doubleindex1 = nextleft * numberOfStates + prev;
-                                    ulint doubleindex3 = prevleft * numberOfStates + nextleft;
-                                                    
-                                    real deltabeta = beta[w][v][doubleindex2] *
-                                                            alpha[w][w+1][doubleindex3] /
-                                                            probState[prevleft] *
-                                                            //transProb[ss] *
-                                                            //transProb1[ss] *
-                                                            alpha[w+1][t][doubleindex1] /
-                                                            probState[nextleft];
-                                                            //* probFragment[trans]; // / probsum;
-                                                        //transProb[i]
-                                                        //alpha[t][v][doubleindex0] /
-                                                        //probState[next] /
-                                                       // probState[prevleft] / probState[j];
-                                                     //   transRightProb0 / probState[prevleft] ;
-                                     
-                                    beta[t][v][doubleindex0] += deltabeta; // / probFragment[trans];
-                                }
+                                beta[t][v][indexOfDoubleindex0] += deltabeta
+                                                                    / probState[prevleft]
+                                                                    / probState[nextleft];
                             }
                         }
                     }
                         
-            
-                // possible production with other possibly long fragments at right of v
-                // current short fragment emits at left
-                        
+                    //
+                    // possible production with other possibly long fragments at right of v
+                    // current short fragment emits at left
+                    //
                         
                     for(ulint nextright = 0; nextright < numberOfStates; nextright++){
-                        if(probState[nextright] == 0)
-                            continue;
-                                
+                        if(probState[nextright] == 0
+                           || emissionType[SScpair[prev]][SScpair[nextright]] == 0)
+                                continue;
+                        ulint doubleindex2 = prev*numberOfStates + nextright;
+                        ulint indexOfDoubleindex2 = betaINDEX.at(doubleindex2);
                             
                         if(emissionType[SScpair[prev]][SScpair[nextright]] == 2) {
                                 
-                            ulint doubleindex2 = prev*numberOfStates + nextright;
                             ulint doubleindex1 = next*numberOfStates + nextright;
-                                    
+                        
+                            real deltabeta = 0.0;
                             for(int w = windowedLength - 1; w > v; w--){
-                                real deltabeta = beta[t][w][doubleindex2] *
-                                                alpha[v][w][doubleindex1] /
-                                probState[nextright]; //  * probFragment[trans];
-                                               // * probTransLeft0;
-                                    beta[t][v][doubleindex0] += deltabeta;
+                                deltabeta += beta[t][w][indexOfDoubleindex2]
+                                            * alpha[v][w][doubleindex1];
                             }
-                            
+                              
+                            beta[t][v][indexOfDoubleindex0] += deltabeta / probState[nextright];
                         }
                                 
                         if(emissionType[SScpair[prev]][SScpair[nextright]] == 3){
-                                
-                            ulint doubleindex2 = prev*numberOfStates + nextright;
-                                
-                            for(int w = windowedLength - 1; w > v; w--){
+  
+                            for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
+                                ulint transright = nextright+(numberOfStates * ss);
+                                ulint prevright = transright / numberOfSecondarySymbols;
+                                if (probState[prevright] == 0) continue;
                                     
-                            
-                                /*
-                                //real probsum = 0;
+                                ulint doubleindex1 = next * numberOfStates + prevright;
+                                ulint doubleindex3 = prevright * numberOfStates + nextright;
                                 
-                                //transProb.clear();
-                                //transProb.resize(numberOfSecondarySymbols, 0.0);
-                                for (uint i = 0; i<numberOfSecondarySymbols; i++){
-                                    transProb[i] = 0.0;
+                                real deltabeta = 0.0;
+                                for(int w = windowedLength - 1; w > v; w--){
+                                    deltabeta += beta[t][w][indexOfDoubleindex2]
+                                                    * alpha[w-1][w][doubleindex3]
+                                                    * alpha[v][w-1][doubleindex1];
                                 }
-                                
-                                //vector <real> transProb (numberOfDoubleStates, 0.0);
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transright = nextright + (numberOfStates * ss);
-                                    ulint prevright = transright / numberOfSecondarySymbols;
-                                    if (probState[prevright] == 0) continue;
-                                    
-                                    ulint doubleindex1 = next * numberOfStates + prevright;
-                                    ulint doubleindex3 = prevright*numberOfStates + nextright;
-                                  
-                                    transProb[ss] = alpha[w-1][w][doubleindex3]
-                                                                * probFragment[trans]
-                                                                / probState[nextright];
-                                   
-                                    
-                                    //probsum += alpha[w-1][w][doubleindex3]
-                                      //          * probFragment[trans];
-                                }
-                                // probsum /= probState[nextright];
-                                
-                                // normalize(transProb);
-                                 
-                                 */
-                                
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transright = nextright+(numberOfStates * ss);
-                                    ulint prevright = transright / numberOfSecondarySymbols;
-                                    if (probState[prevright] == 0) continue;
-                                    
-                                    ulint doubleindex1 = next * numberOfStates + prevright;
-                                    ulint doubleindex3 = prevright * numberOfStates + nextright;
-                                                        
-                                    real deltabeta = beta[t][w][doubleindex2] *
-                                                             alpha[w-1][w][doubleindex3] /
-                                                            //transProb[ss] *
-                                                            probState[nextright] *
-                                                            alpha[v][w-1][doubleindex1] /
-                                                            probState[prevright];
-                                                            // * probFragment[trans]; // / probsum;
-                                                            //transProb[i]
-                                                            //alpha[t][v][doubleindex0] /
-                                                            //probState[next] /
-                                                           // probState[prevleft] / probState[j];
-                                                         //   transRightProb0 / probState[prevleft] ;
-                                         
-                                    beta[t][v][doubleindex0] += deltabeta; // / probFragment[trans];
-                                }
+                                beta[t][v][indexOfDoubleindex0] += deltabeta
+                                                                    / probState[nextright]
+                                                                    / probState[prevright];
                             }
                         }
                     }
@@ -2911,38 +2733,33 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     for(uint t=0; t < windowedLength-1; t++){
         
         for(ulint i=0; i<numberOfStates; i++){
+            
+            if(probState[i] == 0)
+                continue;
+            real deltagamma = 0.0;
             for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
+                
                 ulint trans = i*numberOfSecondarySymbols + ss;
-                if(probFragment[trans] == 0)
-                    continue;
                 ulint next = trans % numberOfStates;
+                if(probState[next] == 0)
+                    continue;
+                if(emissionType[SScpair[i]][SScpair[next]] == 0)
+                    continue;
                 ulint doubleindex = i*numberOfStates + next;
-         //       real deltagamma = beta[t][t+1][doubleindex];
-                real deltagamma = beta[t][t+1][doubleindex] * alpha[t][t+1][doubleindex];
-                //  / probFragment[trans];
-                //* probFragmentEmitsPrimarySymbol[trans][seq[t+halfWindow]]; // / probState[i];
-                                    // / probState[next] / probState[i];
-                              //      alpha[t][t+1][doubleindex];
-                                      // /  probState[next];
-                // / probFragment[trans];
-                gamma[t][i] += deltagamma / probState[i] /probState[next];
-               //  * probFragment[trans];
+                //ulint indexOfDoubleindex = betaINDEX.at(doubleindex);
+        
+                deltagamma += beta[t][t+1][betaINDEX.at(doubleindex)]
+                                    * alpha[t][t+1][doubleindex]
+                                    / probState[next];
                 if(t == windowedLength - 2)
-                    gamma[windowedLength - 1][next] += deltagamma
-                    / probState[i] / probState[next];
-                                 //       * probFragment[trans]; // probState[next];
+                    gamma[windowedLength - 1][next] += deltagamma / probState[i];
             }
+            gamma[t][i] += deltagamma / probState[i];
         }
         normalize(gamma[t]);
     }
     normalize(gamma[windowedLength - 1]);
             
-
- 
- 
- //       normalize(gamma[t]);
- //   }
-    
     
   //'''''''''''''''''''''''''''''''''''''''''''''''''
   //Daqui em diante está igual ao Hmm-FB.cpp
@@ -3070,6 +2887,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     }
 
 }
+
 
 
 void Hmm::insideOutsideV4(vector<byte>& seq){
@@ -3793,6 +3611,7 @@ void Hmm::insideOutsideV4(vector<byte>& seq){
 
 
 
+
 void Hmm::insideOutsideV5(vector<byte>& seq){
        
     uint fullLength = (uint) seq.size();
@@ -3994,44 +3813,35 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
     
     
     
-//    ulint numberOfDoubleStates = numberOfStates * numberOfStates;
+    ulint numberOfDoubleStates = numberOfStates * numberOfStates;
 //    int numberOfSecondarySymbols2 = numberOfSecondarySymbols*numberOfSecondarySymbols;
     
     // map<ulint, ulint> INDEX;
-    unordered_map<ulint, ulint> INDEX;
+    unordered_map<ulint, ulint> betaINDEX;
     
     ulint maxIndex = 0;
     for(ulint i = 0; i < numberOfStates; i++){
         for(ulint j = 0; j < numberOfStates; j++){
             if(emissionType[SScpair[i]][SScpair[j]]) {
                 ulint doubleindex = i*numberOfStates +j;
-                INDEX[doubleindex] = maxIndex;
+                betaINDEX[doubleindex] = maxIndex;
                 maxIndex ++;
             }
         }
     }
     
-  //  vector < vector < vector<real> > > alpha(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (numberOfDoubleStates, 0.0)));
+    vector < vector < vector<real> > > alpha(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (numberOfDoubleStates, 0.0)));
   //  vector < vector < vector<real> > > beta(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (numberOfDoubleStates, 0.0)));
     
     
-    vector < vector < vector<real> > > alpha(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (maxIndex, 0.0)));
+ //   vector < vector < vector<real> > > alpha(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (maxIndex, 0.0)));
     vector < vector < vector<real> > > beta(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (maxIndex, 0.0)));
     
-    
-    
-  //  vector <real> transProb (numberOfSecondarySymbols, 0.0);
-  //  real transProb1[numberOfSecondarySymbols];
-    
-  //  vector < real > transProb2 (numberOfSecondarySymbols2, 0.0);
-    
-    
- //   vector<real> transLeftProb(numberOfFragments, 0.0);
- //   vector<real> transRightProb(numberOfFragments, 0.0);
- //   vector<real> transDoubleProb(numberOfDoubleFragments, 0.0);
- //   vector<real> probDoubleState(numberOfDoubleStates, 0.0);
-    
-    
+ //   vector < vector <real> > alphaTTplusOne (windowedLength,
+ //                                            vector <real> (numberOfFragments, 0.0));
+    vector < vector <real> > betaTTplusOne (windowedLength,
+                                            vector <real> (numberOfFragments, 0.0));
+
     
     //
     // 1. Inside
@@ -4055,15 +3865,16 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
         for(ulint i=0; i<numberOfFragments; i++){
             ulint left = i / numberOfSecondarySymbols;
             ulint right = i % numberOfStates;
-            
-            if(emissionType[SScpair[left]][SScpair[right]]){
-                ulint doubleindex = left * numberOfStates + right;
-                alpha[t][t+1][INDEX[doubleindex]] = probFragment[i] *
-                                        probFragmentEmitsPrimarySymbol[i][ seq[t+halfWindow] ];
-            }
+            ulint doubleindex = left * numberOfStates + right;
+            alpha[t][t+1][doubleindex] = probFragment[i] *
+                        probFragmentEmitsPrimarySymbol[i][ seq[t+halfWindow] ];
+     //       alphaTTplusOne[t][i] = alpha[t][t+1][doubleindex];
         }
         normalize(alpha[t][t+1]);
+     //   normalize(alphaTTplusOne[t]);
     }
+    
+    
     
     //
     // 1.2 Induction
@@ -4077,8 +3888,11 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
                 for(ulint nextright=0; nextright<numberOfStates; nextright++){
            //         if(probState[nextright] == 0) continue;
                     
+                    if(! emissionType[SScpair[prevleft]][SScpair[nextright]])
+                        continue;
+                    
                     ulint parentdoubleindex = prevleft * numberOfStates + nextright;
-                    ulint indexOfParentdoubleindex = INDEX[parentdoubleindex];
+  //                  ulint indexOfParentdoubleindex = INDEX.at(parentdoubleindex);
                     
                     switch(emissionType[SScpair[prevleft]][SScpair[nextright]])
                     {
@@ -4090,117 +3904,64 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
                                 ulint prevright = transright / numberOfSecondarySymbols;
                                 ulint doubleindexright = prevright * numberOfStates + nextright;
                                 ulint doubleindex = prevleft*numberOfStates + prevright;
-                                ulint indexOfDoubleindexright = INDEX[doubleindexright];
-                                
                                 
                                 if(probState[prevright] != 0)
                                 {
-                                    real probright = alpha[t][v-1][INDEX[doubleindex]] *
-                                            alpha[v-1][v][INDEX[doubleindexright]] /
+                                    real probright = alpha[t][v-1][doubleindex] *
+                                            alpha[v-1][v][doubleindexright] /
                                             probState[prevright];
-                                  //      transRightProb[transright] /
-                                   //     probState[prevright];
-                                        //probDoubleState[parentdoubleindex];
-                                alpha[t][v][INDEX[parentdoubleindex]] += probright;
+                                alpha[t][v][parentdoubleindex] += probright;
                                 }
                             }
                             break;
                         
                         case 2:
                             for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
+                                
                                 ulint transleft = prevleft * numberOfSecondarySymbols + ss;
                                 ulint nextleft = transleft % numberOfStates;
                                 ulint doubleindexleft = prevleft*numberOfStates + nextleft;
-                      
                                 ulint doubleindex = nextleft*numberOfStates + nextright;
+                                
                                 if( probState[nextleft] != 0)
-                                   //probDoubleState[parentdoubleindex] != 0)
                                 {
-                              //      ulint parentdoubleindex = prevleft*numberOfStates + prevright;
-                                    real probleft = alpha[t+1][v][INDEX[doubleindex]] *
-                                        alpha[t][t+1][INDEX[doubleindexleft]] /
-                                      //  transLeftProb[transleft] /
+                                    real probleft = alpha[t+1][v][doubleindex] *
+                                        alpha[t][t+1][doubleindexleft] /
                                         probState[nextleft];
-                                        //probDoubleState[parentdoubleindex];
-                                    alpha[t][v][INDEX[parentdoubleindex]] += probleft;
+                                    alpha[t][v][parentdoubleindex] += probleft;
                                 }
                             }
                             break;
                             
                         case 3:
-                            
-                            /*
-                             transProb2.clear();
-                            // transProb2.resize(numberOfSecondarySymbols2, 0.0);
-                            //for (uint i =0; i<numberOfSecondarySymbols2; i++){
-                            //    transProb2[i] = 0.0;
-                            //}
-                            
                             for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                                ulint nextleft = transleft % numberOfStates;
-                                if(probState[nextleft] == 0) continue;
-                                ulint doubleindexleft = prevleft*numberOfStates + nextleft;
-                                        
-                                for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
-                                    ulint transright = tt * numberOfStates + nextright;
-                                    ulint prevright = transright / numberOfSecondarySymbols;
-                                    if(probState[prevright] == 0) continue;
-                                    ulint doubleindexright = prevright * numberOfStates + nextright;
-                             
-                                    int sstt = ss * numberOfSecondarySymbols + tt;
-                                    transProb2[sstt] = alpha[t][t+1][doubleindexleft]
-                                                        * alpha[v-1][v][doubleindexright]
-                                                        / probState[nextleft]
-                                                        / probState[prevright];
-                                }
-                            }
-                            
-                            normalize(transProb2);
-                             */
-                            
-                            for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                                ulint nextleft = transleft % numberOfStates;
-                                if(probState[nextleft] == 0) continue;
-                                ulint doubleindexleft = prevleft*numberOfStates + nextleft;
-                                        
-                                for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
-                                    ulint transright = tt * numberOfStates + nextright;
-                                    ulint prevright = transright / numberOfSecondarySymbols;
-                                    if(probState[prevright] == 0) continue;
-                                    ulint doubleindexright = prevright * numberOfStates + nextright;
                                 
+                                ulint transleft = prevleft * numberOfSecondarySymbols + ss;
+                                ulint nextleft = transleft % numberOfStates;
+                                if(probState[nextleft] == 0) continue;
+                                ulint doubleindexleft = prevleft*numberOfStates + nextleft;
+                                        
+                                for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
+                                    ulint transright = tt * numberOfStates + nextright;
+                                    ulint prevright = transright / numberOfSecondarySymbols;
+                                    if(probState[prevright] == 0) continue;
+                                    
+                                    ulint doubleindexright = prevright * numberOfStates + nextright;
                                     ulint doubleindex = nextleft*numberOfStates + prevright;
-                                    int sstt = ss * numberOfSecondarySymbols + tt;
                                     
                                     if( (v - t) > 2 &&
                                        probState[nextleft] != 0 && probState[prevright] != 0)
-                                   //probDoubleState[parentdoubleindex] != 0)
                                     {
-                                 //   ulint parentdoubleindex = prevleft*numberOfStates + nextright;
-                                  //      real probtrans = alpha[t][t+1][doubleindexleft] *
-                                  //                          alpha[v-1][v][doubleindexright];
-                                        real probleftright = alpha[t+1][v-1][INDEX[doubleindex]]
-                                                            * alpha[t][t+1][INDEX[doubleindexleft]]
+                                        real probleftright = alpha[t+1][v-1][doubleindex]
+                                                            * alpha[t][t+1][doubleindexleft]
                                                             / probState[nextleft]
-                                                            * alpha[v-1][v][INDEX[doubleindexright]]
+                                                            * alpha[v-1][v][doubleindexright]
                                                             / probState[prevright];
-                                                                    
-                                        
-                                           //                 transProb2[sstt];
-                                         //   probtrans / probState[nextleft] / probState[prevright];
-                                        //
-                                    alpha[t][v][INDEX[parentdoubleindex]] += probleftright;
-                                    //    alpha3 += probleftright;
-                                    //    probsum += probtrans;
+                                    alpha[t][v][parentdoubleindex] += probleftright;
                                     }
                                 }
                             }
                     }
-                    
-              //      if(emissionType[SScpair[prevleft]][SScpair[nextright]] == 3 && probsum != 0)
-              //          alpha[t][v][parentdoubleindex] += alpha3 / probsum;
                 
                 }
             }
@@ -4228,56 +3989,44 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
             for(ulint j=0; j < numberOfStates; j++){
                 if(emissionType[SScpair[i]][SScpair[j]] > 0){
                     ulint doubleindex = i*numberOfStates + j;
-                    beta[0][windowedLength-1][INDEX[doubleindex]] =
+                    beta[0][windowedLength-1][betaINDEX.at(doubleindex)] =
                             probState_head[i] * probState_tail[j];
                 }
             }
         }
     }
     else{
-        for(ulint i=0; i < numberOfStates; i++)
-            for(ulint j=0; j < numberOfStates; j++)
-                if(emissionType[SScpair[i]][SScpair[j]] > 0)
-                        beta[0][windowedLength-1][i*numberOfStates + j] = 1.0;
+        for(ulint i=0; i < numberOfStates; i++){
+            for(ulint j=0; j < numberOfStates; j++){
+                if(emissionType[SScpair[i]][SScpair[j]] > 0){
+                    ulint doubleindex = i*numberOfStates + j;
+                    beta[0][windowedLength-1][betaINDEX.at(doubleindex)] = 1.0;
+                }
+            }
+        }
     }
     normalize(beta[0][windowedLength-1]);
     
     // 2.2 Induction
+    
     for(int t=0; t < windowedLength-1; t++){
-        //int v;
-        
-        /*
-        if(t > 0) {
-            for(ulint i=0; i<numberOfFragments; i++)
-                transLeftProb[i] = probFragment[i] *
-                        probFragmentEmitsPrimarySymbol[i][ seq[t-1+halfWindow] ];
-            normalize(transLeftProb);
-        }
-         */
     
         for (int v=windowedLength-1; v > t; v--){
  
      //       if(t==0 && v==windowedLength-1)
      //           continue;
-            /*
-            if(v < windowedLength - 1) {
-                for(ulint i=0; i<numberOfFragments; i++)
-                    transRightProb[i] = probFragment[i] *
-                            probFragmentEmitsPrimarySymbol[i][ seq[v+halfWindow] ];
-                normalize(transRightProb);
-            }
-            */
             
             for(ulint prevleft=0; prevleft<numberOfStates; prevleft++){
-                
            //     if(probState[prevleft] == 0) continue;
                 
                 for(ulint nextright=0; nextright<numberOfStates; nextright++){
-                
                //     if(probState[nextright] == 0) continue;
                     
+                    if(emissionType[SScpair[prevleft]][SScpair[nextright]] == 0)
+                        continue;
+                    
                     ulint parentdoubleindex = prevleft * numberOfStates + nextright;
-                    ulint indexOfParentdoubleindex = INDEX[parentdoubleindex];
+                    ulint indexOfParentdoubleindex = betaINDEX.at(parentdoubleindex);
                     
                     if(emissionType[SScpair[prevleft]][SScpair[nextright]] == 1
                             && v < windowedLength - 1)
@@ -4287,14 +4036,16 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
                             ulint transright = tt * numberOfStates + nextright;
                             ulint prevright = transright /  numberOfSecondarySymbols;
                             ulint doubleindexright = prevright * numberOfStates + nextright;
-                             
+                            
+                            if(emissionType[SScpair[prevleft]][SScpair[prevright]] == 0)
+                                continue;
                             ulint doubleindex = prevleft*numberOfStates + prevright;
                             if(probState[nextright] != 0)
                             {
                                 real probright = beta[t][v+1][indexOfParentdoubleindex] *
-                                                alpha[v][v+1][INDEX[doubleindexright]] /
+                                                alpha[v][v+1][doubleindexright] /
                                                 probState[nextright];
-                                beta[t][v][INDEX[doubleindex]] += probright;
+                                beta[t][v][betaINDEX.at(doubleindex)] += probright;
                             }
                         }
                     }
@@ -4307,14 +4058,16 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
                             ulint transleft = prevleft * numberOfSecondarySymbols + ss;
                             ulint nextleft = transleft % numberOfStates;
                             ulint doubleindexleft = prevleft * numberOfStates + nextleft;
-                                  
+                            
+                            if(emissionType[SScpair[nextleft]][SScpair[nextright]] == 0)
+                                continue;
                             ulint doubleindex = nextleft*numberOfStates + nextright;
                             if(probState[prevleft] != 0)
                             {
                                 real probleft = beta[t-1][v][indexOfParentdoubleindex] *
-                                                alpha[t-1][t][INDEX[doubleindexleft]] /
+                                                alpha[t-1][t][doubleindexleft] /
                                                 probState[prevleft];
-                                beta[t][v][INDEX[doubleindex]] += probleft;
+                                beta[t][v][betaINDEX.at(doubleindex)] += probleft;
                             }
                         }
                     }
@@ -4322,16 +4075,6 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
                     else if(emissionType[SScpair[prevleft]][SScpair[nextright]] == 3
                        && t > 0 && v < windowedLength -1)
                     {
-                        
-                        /*
-                        //real probsum = 0;
-                        
-                        //transProb2.clear();
-                        //transProb2.resize(numberOfSecondarySymbols2, 0.0);
-                        for (uint i =0; i<numberOfSecondarySymbols2; i++){
-                            transProb2[i] = 0.0;
-                        }
-                        
                         for(uint ss=0; ss<numberOfSecondarySymbols; ss++)
                         {
                             ulint transleft = prevleft * numberOfSecondarySymbols + ss;
@@ -4343,253 +4086,147 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
                                 ulint transright = tt * numberOfStates + nextright;
                                 ulint prevright = transright / numberOfSecondarySymbols;
                                 ulint doubleindexright = prevright * numberOfStates + nextright;
-                                int sstt = ss * numberOfSecondarySymbols + tt;
-                                        
-                                transProb2[sstt]= alpha[t-1][t][doubleindexleft]*
-                                                    alpha[v][v+1][doubleindexright] /
-                                                    probState[prevleft] / probState[nextright];
-                            }
-                        }
-                        
-                       // normalize(transProb2);
-                         */
-                                 
-                        for(uint ss=0; ss<numberOfSecondarySymbols; ss++)
-                        {
-                            ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                            ulint nextleft = transleft % numberOfStates;
-                            ulint doubleindexleft = prevleft * numberOfStates + nextleft;
-                                    
-                            for(uint tt=0; tt<numberOfSecondarySymbols; tt++)
-                            {
-                                ulint transright = tt * numberOfStates + nextright;
-                                ulint prevright = transright / numberOfSecondarySymbols;
-                                ulint doubleindexright = prevright * numberOfStates + nextright;
-                                 
+                                
+                                if(emissionType[SScpair[nextleft]][SScpair[prevright]] == 0)
+                                    continue;
                                 ulint doubleindex = nextleft*numberOfStates + prevright;
-                               // int sstt = ss * numberOfSecondarySymbols + tt;
                                 
                                 if(probState[prevleft] != 0 && probState[nextright] != 0)
                                 {
-                                    real probleftright =  alpha[t-1][t][INDEX[doubleindexleft]] *
-                                                        alpha[v][v+1][INDEX[doubleindexright]] *
+                                    real probleftright =  alpha[t-1][t][doubleindexleft] *
+                                                        alpha[v][v+1][doubleindexright] *
                                                         beta[t-1][v+1][indexOfParentdoubleindex] /
                                                         probState[prevleft] /
-                                                        probState[nextright]; // /probsum ;
-                                    beta[t][v][INDEX[doubleindex]] += probleftright;
+                                                        probState[nextright]; // / probsum;
+                                    beta[t][v][betaINDEX.at(doubleindex)] += probleftright;
                                 }
                             }
                         }
                     }
                 }
             }
-            
-            if (v == t+1){
-                
-                for(ulint trans=0; trans < numberOfFragments; trans++){
-                    if(probFragment[trans] == 0)
-                        continue;
-                    ulint prev = trans / numberOfSecondarySymbols;
-                    ulint next = trans % numberOfStates;
-                    ulint doubleindex0 = prev * numberOfStates + next;
-                    ulint indexOfDoubleindex0 = INDEX[doubleindex0];
-                
-            // possible production with other possibly long fragments at left of t
-            // current short fragment emits at right
-                    
-                    for(ulint prevleft = 0; prevleft < numberOfStates; prevleft++){
-                        if(probState[prevleft] == 0)
-                            continue;
-                            
-                        if(emissionType[SScpair[prevleft]][SScpair[next]] == 1) {
-                            
-                            ulint doubleindex2 = prevleft*numberOfStates + next;
-                            ulint indexOfDoubleindex2 = INDEX[doubleindex2];
-                            ulint doubleindex1 = prevleft*numberOfStates + prev;
-                            ulint indexOfDoubleindex1 = INDEX[doubleindex1];
-                                
-                            for(int w = 0; w < t; w++){
-                                real deltabeta = beta[w][v][indexOfDoubleindex2] *
-                                                alpha[w][t][indexOfDoubleindex1]
-                                                /  probState[prevleft];
-                                            //    * probFragment[trans];
-                                                //probTransRight0;
-                                    beta[t][v][indexOfDoubleindex0] += deltabeta;
-                            }
-                        }
-                            
-                        if(emissionType[SScpair[prevleft]][SScpair[next]] == 3){
-                            
-                            ulint doubleindex2 = prevleft*numberOfStates + next;
-                            ulint indexOfDoubleindex2 = INDEX[doubleindex2];
-                            
-                            for(int w = 0; w < t; w++){
-                                
-                                
-                                /*
-                                real probsum = 0.0;
-                                
-                                //transProb.clear();
-                               // transProb.resize(numberOfSecondarySymbols, 0.0);
-                                for (uint ss = 0; ss<numberOfSecondarySymbols; ss++){
-                                    transProb1[ss] = 0.0;
-                                }
-                                
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                                    ulint nextleft = transleft % numberOfStates;
-                                    if(probState[nextleft] == 0) continue;
-                                    
-                                    ulint doubleindex1 = nextleft* numberOfStates + prev;
-                                    ulint doubleindex3 = prevleft*numberOfStates + nextleft;
-                                    
-                                    transProb1[ss] = alpha[w][w+1][doubleindex3]
-                                                            * probFragment[trans]
-                                                            / probState[prevleft];
-                                    probsum += transProb1[ss];
-                                  //  probsum += alpha[w][w+1][doubleindex3] * probFragment[trans];
-                                }
-                                
-                                //normalize(transProb);
-                                
-                             //   for(uint ss = 0; ss < numberOfSecondarySymbols; ss++){
-                             //       transProb1[ss] /= probsum;
-                             //   }
-                                
-                                
-                                // probsum /= probState[prevleft];
-                                 */
-                            
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transleft = prevleft * numberOfSecondarySymbols + ss;
-                                    ulint nextleft = transleft % numberOfStates;
-                                    if(probState[nextleft] == 0) continue;
-                                    
-                                    ulint doubleindex1 = nextleft * numberOfStates + prev;
-                                    ulint doubleindex3 = prevleft * numberOfStates + nextleft;
-                                                    
-                                    real deltabeta = beta[w][v][indexOfDoubleindex2] *
-                                                            alpha[w][w+1][INDEX[doubleindex3]] /
-                                                            probState[prevleft] *
-                                                            //transProb[ss] *
-                                                            //transProb1[ss] *
-                                                            alpha[w+1][t][INDEX[doubleindex1]] /
-                                                            probState[nextleft];
-                                                            //* probFragment[trans]; // / probsum;
-                                                        //transProb[i]
-                                                        //alpha[t][v][doubleindex0] /
-                                                        //probState[next] /
-                                                       // probState[prevleft] / probState[j];
-                                                     //   transRightProb0 / probState[prevleft] ;
-                                     
-                                    beta[t][v][indexOfDoubleindex0] += deltabeta; // / probFragment[trans];
-                                }
-                            }
-                        }
-                    }
-                        
-            
-                // possible production with other possibly long fragments at right of v
-                // current short fragment emits at left
-                        
-                        
-                    for(ulint nextright = 0; nextright < numberOfStates; nextright++){
-                        if(probState[nextright] == 0)
-                            continue;
-                                
-                            
-                        if(emissionType[SScpair[prev]][SScpair[nextright]] == 2) {
-                                
-                            ulint doubleindex2 = prev*numberOfStates + nextright;
-                            ulint doubleindex1 = next*numberOfStates + nextright;
-                            ulint indexOfDoubleindex2 = INDEX[doubleindex2];
-                            ulint indexOfDoubleindex1 = INDEX[doubleindex1];
-                                    
-                            for(int w = windowedLength - 1; w > v; w--){
-                                real deltabeta = beta[t][w][indexOfDoubleindex2] *
-                                                alpha[v][w][indexOfDoubleindex1] /
-                                probState[nextright]; //  * probFragment[trans];
-                                               // * probTransLeft0;
-                                    beta[t][v][indexOfDoubleindex0] += deltabeta;
-                            }
-                            
-                        }
-                                
-                        if(emissionType[SScpair[prev]][SScpair[nextright]] == 3){
-                                
-                            ulint doubleindex2 = prev*numberOfStates + nextright;
-                            ulint indexOfDoubleindex2 = INDEX[doubleindex2];
-                                
-                            for(int w = windowedLength - 1; w > v; w--){
-                                    
-                            
-                                /*
-                                //real probsum = 0;
-                                
-                                //transProb.clear();
-                                //transProb.resize(numberOfSecondarySymbols, 0.0);
-                                for (uint i = 0; i<numberOfSecondarySymbols; i++){
-                                    transProb[i] = 0.0;
-                                }
-                                
-                                //vector <real> transProb (numberOfDoubleStates, 0.0);
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transright = nextright + (numberOfStates * ss);
-                                    ulint prevright = transright / numberOfSecondarySymbols;
-                                    if (probState[prevright] == 0) continue;
-                                    
-                                    ulint doubleindex1 = next * numberOfStates + prevright;
-                                    ulint doubleindex3 = prevright*numberOfStates + nextright;
-                                  
-                                    transProb[ss] = alpha[w-1][w][doubleindex3]
-                                                                * probFragment[trans]
-                                                                / probState[nextright];
-                                   
-                                    
-                                    //probsum += alpha[w-1][w][doubleindex3]
-                                      //          * probFragment[trans];
-                                }
-                                // probsum /= probState[nextright];
-                                
-                                // normalize(transProb);
-                                 
-                                 */
-                                
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transright = nextright+(numberOfStates * ss);
-                                    ulint prevright = transright / numberOfSecondarySymbols;
-                                    if (probState[prevright] == 0) continue;
-                                    
-                                    ulint doubleindex1 = next * numberOfStates + prevright;
-                                    ulint doubleindex3 = prevright * numberOfStates + nextright;
-                                                        
-                                    real deltabeta = beta[t][w][indexOfDoubleindex2] *
-                                                             alpha[w-1][w][INDEX[doubleindex3]] /
-                                                            //transProb[ss] *
-                                                            probState[nextright] *
-                                                            alpha[v][w-1][INDEX[doubleindex1]] /
-                                                            probState[prevright];
-                                                            // * probFragment[trans]; // / probsum;
-                                                            //transProb[i]
-                                                            //alpha[t][v][doubleindex0] /
-                                                            //probState[next] /
-                                                           // probState[prevleft] / probState[j];
-                                                         //   transRightProb0 / probState[prevleft] ;
-                                         
-                                    beta[t][v][indexOfDoubleindex0] += deltabeta;
-                                    // / probFragment[trans];
-                                }
-                            }
-                        }
-                    }
-                
-                }
-            }
-             
+          
             normalize(beta[t][v]);
 
         }
     }
+    
+    //2.3 Termination
+    
+    for(int t=0; t < windowedLength-1; t++){
+    
+        for(ulint trans=0; trans < numberOfFragments; trans++){
+            if(probFragment[trans] == 0)
+                continue;
+            ulint prev = trans / numberOfSecondarySymbols;
+            ulint next = trans % numberOfStates;
+      
+            ulint doubleindex0 = prev * numberOfStates + next;
+     //       ulint indexOfDoubleindex0 = betaINDEX.at(doubleindex0);
+            
+            if(emissionType[SScpair[prev]][SScpair[next]])
+                betaTTplusOne[t][trans] = beta[t][t+1][betaINDEX.at(doubleindex0)];
+   
+            //
+            // possible production with other possibly long fragments at left of t
+            // current short fragment emits at right
+            //
+        
+            for(ulint prevleft = 0; prevleft < numberOfStates; prevleft++){
+                if(probState[prevleft] == 0
+                   || emissionType[SScpair[prevleft]][SScpair[next]] == 0)
+                        continue;
+                    
+                ulint doubleindex2 = prevleft*numberOfStates + next;
+                ulint indexOfDoubleindex2 = betaINDEX.at(doubleindex2);
+        
+                if(emissionType[SScpair[prevleft]][SScpair[next]] == 1) {
+                    ulint doubleindex1 = prevleft*numberOfStates + prev;
+                    
+                    real deltabeta = 0.0;
+                    for(int w = 0; w < t; w++){
+                        deltabeta += beta[w][t+1][indexOfDoubleindex2] *
+                                    alpha[w][t][doubleindex1];
+                    }
+                        
+                    //  beta[t][v][indexOfDoubleindex0] += deltabeta/ probState[prevleft];
+                    betaTTplusOne[t][trans] += deltabeta / probState[prevleft];
+                }
+                
+                if(emissionType[SScpair[prevleft]][SScpair[next]] == 3){
+            
+                    for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
+                        ulint transleft = prevleft * numberOfSecondarySymbols + ss;
+                        ulint nextleft = transleft % numberOfStates;
+                        if(probState[nextleft] == 0) continue;
+                        
+                        ulint doubleindex1 = nextleft * numberOfStates + prev;
+                        ulint doubleindex3 = prevleft * numberOfStates + nextleft;
+                    
+                        real deltabeta = 0.0;
+                        for(int w = 0; w < t; w++){
+                            deltabeta += beta[w][t+1][indexOfDoubleindex2]
+                                        * alpha[w][w+1][doubleindex3]
+                                        * alpha[w+1][t][doubleindex1];
+                        }
+                        betaTTplusOne[t][trans] += deltabeta
+                                                    / probState[prevleft]
+                                                    / probState[nextleft];
+                    }
+                }
+            }
+            
+            //
+            // possible production with other possibly long fragments at right of v
+            // current short fragment emits at left
+            //
+            
+            for(ulint nextright = 0; nextright < numberOfStates; nextright++){
+                if(probState[nextright] == 0
+                   || emissionType[SScpair[prev]][SScpair[nextright]] == 0)
+                        continue;
+                
+                ulint doubleindex2 = prev*numberOfStates + nextright;
+                ulint indexOfDoubleindex2 = betaINDEX.at(doubleindex2);
+                
+                if(emissionType[SScpair[prev]][SScpair[nextright]] == 2) {
+                    
+                    ulint doubleindex1 = next*numberOfStates + nextright;
+            
+                    real deltabeta = 0.0;
+                    for(int w = windowedLength - 1; w > t+1; w--){
+                        deltabeta += beta[t][w][indexOfDoubleindex2]
+                                    * alpha[t+1][w][doubleindex1];
+                    }
+                    betaTTplusOne[t][trans] += deltabeta / probState[nextright];
+                }
+                    
+                if(emissionType[SScpair[prev]][SScpair[nextright]] == 3){
+
+                    for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
+                        ulint transright = nextright+(numberOfStates * ss);
+                        ulint prevright = transright / numberOfSecondarySymbols;
+                        if (probState[prevright] == 0) continue;
+                        
+                        ulint doubleindex1 = next * numberOfStates + prevright;
+                        ulint doubleindex3 = prevright * numberOfStates + nextright;
+                    
+                        real deltabeta = 0.0;
+                        for(int w = windowedLength - 1; w > t+1; w--){
+                            deltabeta += beta[t][w][indexOfDoubleindex2]
+                                        * alpha[w-1][w][doubleindex3]
+                                        * alpha[t+1][w-1][doubleindex1];
+                        }
+                        betaTTplusOne[t][trans] += deltabeta
+                                                    / probState[nextright]
+                                                    / probState[prevright];
+                    }
+                }
+            }
+        }
+        normalize(betaTTplusOne[t]);
+    }
+ 
   
     //''''''''''''''''''''''''''''''''''''''''''''''
     // 3. gamma
@@ -4603,40 +4240,33 @@ void Hmm::insideOutsideV5(vector<byte>& seq){
     for(uint t=0; t < windowedLength-1; t++){
         
         for(ulint i=0; i<numberOfStates; i++){
+            
+            if(probState[i] == 0)
+                continue;
+            real deltagamma = 0.0;
             for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
+                
                 ulint trans = i*numberOfSecondarySymbols + ss;
-                if(probFragment[trans] == 0)
-                    continue;
                 ulint next = trans % numberOfStates;
+                if(probState[next] == 0)
+                    continue;
+       //         if(emissionType[SScpair[i]][SScpair[next]] == 0)
+       //             continue;
                 ulint doubleindex = i*numberOfStates + next;
-                ulint indexOfDoubleindex = INDEX[doubleindex];
-         //       real deltagamma = beta[t][t+1][doubleindex];
-                real deltagamma = beta[t][t+1][indexOfDoubleindex] *
-                                    alpha[t][t+1][indexOfDoubleindex];
-                //  / probFragment[trans];
-                //* probFragmentEmitsPrimarySymbol[trans][seq[t+halfWindow]]; // / probState[i];
-                                    // / probState[next] / probState[i];
-                              //      alpha[t][t+1][doubleindex];
-                                      // /  probState[next];
-                // / probFragment[trans];
-                gamma[t][i] += deltagamma / probState[i] /probState[next];
-               //  * probFragment[trans];
+                //ulint indexOfDoubleindex = betaINDEX.at(doubleindex);
+        
+                deltagamma += betaTTplusOne[t][trans]
+                                    * alpha[t][t+1][doubleindex]
+                                    / probState[next];
                 if(t == windowedLength - 2)
-                    gamma[windowedLength - 1][next] += deltagamma
-                    / probState[i] / probState[next];
-                                 //       * probFragment[trans]; // probState[next];
+                    gamma[windowedLength - 1][next] += deltagamma / probState[i];
             }
+            gamma[t][i] += deltagamma / probState[i];
         }
         normalize(gamma[t]);
     }
     normalize(gamma[windowedLength - 1]);
             
-
- 
- 
- //       normalize(gamma[t]);
- //   }
-    
     
   //'''''''''''''''''''''''''''''''''''''''''''''''''
   //Daqui em diante está igual ao Hmm-FB.cpp
