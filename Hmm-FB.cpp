@@ -395,8 +395,7 @@ vector<byte> Hmm::predict(vector<byte>& originalSeq, vector<byte> &secondarySeq,
 				maxProb = probSecondarySymbol[a][t];
 				maxSymbol = t;
 			}
-		}
-		assert(maxProb != -1);
+		}		assert(maxProb != -1);
 		pred[a-halfWindow] = maxSymbol;
 
 		if(stats[0].on){

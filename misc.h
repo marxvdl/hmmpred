@@ -35,8 +35,8 @@
 
 using namespace std;
 
-// #define real double
-#define real float
+#define real double
+// #define real float
 
 typedef unsigned long int ulint;
 typedef unsigned char byte;
