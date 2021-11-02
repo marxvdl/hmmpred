@@ -834,13 +834,13 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
     
     uint SScPair[numberOfStates];
     
-    
+   /*
      ulint number1 = numberOfXtraHalfStates * numberOfSecondarySymbols;
      ulint number2 = numberOfXtraHalfStates;
      ulint number3 = numberOfXtraHalfStates / numberOfSecondarySymbols;
-    
+    */
 
-/*
+
     // no need to use the variable numberOfXtraHalfStates, which is only defined when -h is used in the command line
 
     ulint number3 = 1.0;
@@ -848,7 +848,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
         number3 *= numberOfSecondarySymbols;
     ulint number2 = number3 * numberOfSecondarySymbols;
     ulint number1 = number2 * numberOfSecondarySymbols;
-   */
+
     for(uint i = 0; i < numberOfStates; i++){
         uint SScPair1 = i % number1 / number2 % 3;
         uint SScPair2 = i % number2 / number3 % 3;
@@ -869,7 +869,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
     // Double productions for the same secondary structures: XE-W-EX, XH-W-HX, XC-W-CX.
     // Otherwise first left and then right, E > H > C, no EH or HE.
     
-    // /*
+    /*
     byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 2, 0, 0},
                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                               {1, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -879,11 +879,28 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                               {0, 0, 3, 0, 1, 1, 0, 1, 1},
                               {0, 0, 2, 0, 0, 3, 0, 0, 1},
                               {0, 0, 2, 0, 0, 2, 0, 0, 3}};
-    // */
+    */
+
+    
+    
+    // /*
+    byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 0, 0, 0},
+                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                              {1, 0, 0, 0, 0, 0, 3, 0, 0},
+                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                              {0, 0, 2, 0, 0, 0, 0, 0, 0},
+                              {0, 0, 2, 0, 0, 0, 0, 0, 0},
+                              {0, 0, 3, 0, 0, 0, 0, 0, 0},
+                              {0, 0, 2, 0, 0, 0, 0, 0, 0},
+                              {0, 0, 2, 0, 1, 1, 0, 1, 1}};
+   // */
+    
+    
+    
     
     // exclusively double emission for XE-W-EX
     
-      /*
+    /*
      byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -893,11 +910,11 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                                {0, 0, 3, 0, 1, 1, 0, 1, 1},
                                {0, 0, 2, 0, 0, 3, 0, 0, 1},
                                {0, 0, 2, 0, 0, 2, 0, 0, 3}};
-       */
+   */
     
     // alpha/alpha and beta/beta antiparallel double clauses
     
-/*
+     /*
     byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 0, 0, 0},
                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                               {0, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -907,12 +924,12 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                               {0, 0, 3, 0, 0, 0, 0, 0, 1},
                               {0, 0, 0, 0, 0, 3, 0, 0, 1},
                               {0, 0, 2, 0, 0, 2, 0, 0, 3}};
-      */
+     */
     
     
     // Attempting alpha/beta antiparallel double clauses
     
-     /*
+    /*
     byte emissionType[9][9] ={{3, 0, 0, 0, 3, 0, 0, 0, 0},
                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                               {0, 0, 0, 0, 3, 0, 3, 3, 0},
@@ -922,13 +939,13 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                               {0, 0, 3, 0, 3, 3, 0, 0, 1},
                               {0, 0, 3, 0, 0, 0, 0, 3, 1},
                               {0, 0, 2, 0, 3, 2, 0, 0, 3}};
-     */
+    */
     
   
    
     // No H anywhere !!! Double E and C and otherwise first LEFT and then RIGHT
     
-    /*
+   /*
    byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 2, 0, 0},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {1, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -938,7 +955,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                              {0, 0, 3, 0, 0, 0, 0, 0, 1},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {0, 0, 2, 0, 0, 0, 0, 0, 3}};
-      */
+    */
     
     // No H anywhere !!! Double E and C EXCLUSEVELY !!!!
     
@@ -984,7 +1001,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
    
     // No H anywhere !!! Double E exclusively C first LEFT and then RIGHT !!!!
     
-   /*
+    /*
    byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 0, 0, 0},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {0, 0, 0, 0, 0, 0, 2, 0, 0},
@@ -1082,7 +1099,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                              {1, 0, 1, 0, 1, 1, 2, 2, 0},
                              {1, 0, 1, 0, 1, 1, 2, 2, 0},
                              {0, 0, 2, 0, 0, 2, 0, 0, 1}};
-   */
+  */
     
     // Alternating sides for C and nonC (E or H) fragments beginning at LEFT, should also be equivalent to the HMM. NOW WORKING !!!
 
@@ -1199,7 +1216,14 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
     
     vector < vector < vector<real> > > probTrans(windowedLength, vector < vector<real> > (windowedLength, vector <real> (numberOfFragments, 0.0)));
     
-    vector < real > probDoubleState(numberOfDoubleStates, 0.0);
+    // vector < real > probDoubleState(numberOfDoubleStates, 0.0);
+
+
+//
+//     number to be used in the appropriate normalization of double production transition probabilities
+//
+    
+    real summedProbOfDoubleStates = 0.0;
     for(ulint left = 0; left < numberOfStates; left ++){
         if(probState[left] == 0)
             continue;
@@ -1207,14 +1231,12 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
             if(probState[right] == 0)
                 continue;
             byte emission = emissionType[SScPair[left]][SScPair[right]];
-            if(emission == 0)
-                continue;
-            ulint doubleIndex = left * numberOfStates + right;
-            probDoubleState[doubleIndex] = probState[left] * probState[right];
+            if(emission)
+                summedProbOfDoubleStates += probState[left] * probState[right];
+           
         }
     }
-//    normalize(probDoubleState);
-    
+
     
     //
     // 1. Inside
@@ -1463,7 +1485,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                                    
                                 }
                                  */
-                                alpha[t][v][doubleIndex] += deltaAlpha;
+                                alpha[t][v][doubleIndex] += deltaAlpha; // / summedProbOfDoubleStates;
                             
                             }
                         }
@@ -1651,7 +1673,8 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
 
                             real deltaBeta = beta[t-1][v][parentDoubleIndex]
                                                     // * alpha[t-1][t][doubleIndexLeft]
-                            * probFragment[transLeft] / probState[prevLeft]; //  / probState[nextRight];
+                                                    * probFragment[transLeft]
+                                                    / probState[prevLeft]; //  / probState[nextRight];
                             
                             if ( v >= t+1 ) {
                                 beta[t][v][doubleIndex] += deltaBeta * alphaZero[t-1][transLeft] ;
@@ -1754,6 +1777,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                                                         * probFragment[transRight]
                                                         / probState[prevLeft]
                                                         / probState[nextRight];
+                                                        // / summedProbOfDoubleStates;
                                     
                                     real deltaBeta  =   transProb // beta[t-1][v+1][parentDoubleIndex]
                                                         // * probTrans[t-1][t][transLeft]
@@ -1880,12 +1904,12 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
         }
     }
     
-    // /*
+     /*
     for(int t = 0; t < windowedLength - 1; t++){
         // normalize(beta[t][t+1]);
         normalize(betaZero[t]);
     }
-    // */
+     */
   
     //''''''''''''''''''''''''''''''''''''''''''''''
     // 3. gamma
@@ -2086,13 +2110,13 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     
     uint SScPair[numberOfStates];
     
-    
+    /*
      ulint number1 = numberOfXtraHalfStates * numberOfSecondarySymbols;
      ulint number2 = numberOfXtraHalfStates;
      ulint number3 = numberOfXtraHalfStates / numberOfSecondarySymbols;
-    
+    */
 
-/*
+// /*
     // no need to use the variable numberOfXtraHalfStates, which is only defined when -h is used in the command line
 
     ulint number3 = 1.0;
@@ -2100,7 +2124,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
         number3 *= numberOfSecondarySymbols;
     ulint number2 = number3 * numberOfSecondarySymbols;
     ulint number1 = number2 * numberOfSecondarySymbols;
-   */
+//   */
     for(uint i = 0; i < numberOfStates; i++){
         uint SScPair1 = i % number1 / number2 % 3;
         uint SScPair2 = i % number2 / number3 % 3;
@@ -2121,7 +2145,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     // Double productions for the same secondary structures: XE-W-EX, XH-W-HX, XC-W-CX.
     // Otherwise first left and then right, E > H > C, no EH or HE.
     
-    /*
+    // /*
     byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 2, 0, 0},
                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                               {1, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -2131,7 +2155,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                               {0, 0, 3, 0, 1, 1, 0, 1, 1},
                               {0, 0, 2, 0, 0, 3, 0, 0, 1},
                               {0, 0, 2, 0, 0, 2, 0, 0, 3}};
-    */
+    // */
     
     // exclusively double emission for XE-W-EX
     
@@ -2149,7 +2173,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     
     // alpha/alpha and beta/beta antiparallel double clauses
     
-    //  /*
+   /*
     byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 0, 0, 0},
                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                               {0, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -2159,7 +2183,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                               {0, 0, 3, 0, 0, 0, 0, 0, 1},
                               {0, 0, 0, 0, 0, 3, 0, 0, 1},
                               {0, 0, 2, 0, 0, 2, 0, 0, 3}};
-    //  */
+   */
     
     
     // Attempting alpha/beta antiparallel double clauses
@@ -2180,7 +2204,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
    
     // No H anywhere !!! Double E and C and otherwise first LEFT and then RIGHT
     
-    /*
+   /*
    byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 2, 0, 0},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {1, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -2190,7 +2214,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                              {0, 0, 3, 0, 0, 0, 0, 0, 1},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {0, 0, 2, 0, 0, 0, 0, 0, 3}};
-      */
+    */
     
     // No H anywhere !!! Double E and C EXCLUSEVELY !!!!
     
@@ -2246,7 +2270,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                              {0, 0, 3, 0, 0, 0, 1, 0, 1},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {0, 0, 0, 0, 0, 0, 2, 0, 0}};
-     */
+    */
     
   
     // No H anywhere !!! Double E exclusively C first RIGHT and then LEFT !!!!
@@ -2310,15 +2334,15 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     
       /*
      byte emissionType[9][9] ={{0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 2},
-                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
-                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 2},
                                {0, 0, 0, 0, 0, 0, 0, 0, 2},
                                {0, 0, 0, 0, 0, 0, 0, 0, 2},
                                {0, 0, 0, 0, 0, 0, 0, 0, 2},
                                {0, 0, 0, 0, 0, 0, 0, 0, 2}};
-       */
+      */
     
 
   
@@ -2382,7 +2406,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     
       // Everybody emits at right, also equivalent to the HMM
     
-      /*
+    /*
      byte emissionType[9][9] ={{0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -2391,8 +2415,8 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
-                               {1, 1, 1, 1, 1, 1, 1, 1, 1}};
-      */
+                               {1, 0, 1, 0, 1, 1, 1, 1, 1}};
+    */
     
     /*
   // Everybody emits at right, also equivalent to the HMM
@@ -2424,7 +2448,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                               {3, 3, 3, 3, 3, 3, 3, 3, 3}};
      */
     
-      /*
+    /*
     //Everybody emits at left/right, again, but no HE or HE
     
     byte emissionType[9][9] ={{3, 0, 3, 0, 3, 3, 3, 3, 3},
@@ -2436,13 +2460,13 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                               {3, 0, 3, 0, 3, 3, 3, 3, 3},
                               {3, 0, 3, 0, 3, 3, 3, 3, 3},
                               {3, 0, 3, 0, 3, 3, 3, 3, 3}};
-       */
+     */
     
    
     
     ulint numberOfDoubleStates = numberOfStates * numberOfStates;
    
-    unordered_map<ulint, ulint> indexOfDoubleIndex;
+    unordered_map<ulint, ulint> pairIndex;
    
     ulint maxIndex = 0;
     for(ulint i = 0; i < numberOfStates; i++){
@@ -2451,25 +2475,27 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
             if(probState[j] == 0) continue;
             if(emissionType[SScPair[i]][SScPair[j]]) {
                 ulint doubleIndex = i*numberOfStates +j;
-                indexOfDoubleIndex[doubleIndex] = maxIndex;
+                pairIndex[doubleIndex] = maxIndex;
                 maxIndex ++;
             }
         }
     }
     
-    vector < real > transDoubleIndex (numberOfFragments, 0.0);
  
     for(ulint trans = 0; trans < numberOfFragments; trans++){
         if(probFragment[trans] == 0) continue;
-        ulint left = trans / numberOfSecondarySymbols;
-        ulint right = trans % numberOfStates;
-        ulint doubleIndex = left * numberOfStates + right;
-        transDoubleIndex[trans] = doubleIndex;
+        ulint i = trans / numberOfSecondarySymbols;
+        ulint j = trans % numberOfStates;
+        if(emissionType[SScPair[i]][SScPair[j]] == 0) {
+            ulint doubleIndex = i * numberOfStates + j;
+            pairIndex[doubleIndex] = maxIndex;
+            maxIndex++;
+        }
     }
     vector < vector < vector<real> > > alpha(windowedLength, vector < vector<real> > (windowedLength+1, vector <real> (maxIndex, 0.0)));
     vector < vector < vector<real> > > beta(windowedLength, vector < vector<real> > (windowedLength, vector <real> (maxIndex, 0.0)));
     
-    vector < vector <real> > alphaTTplusOne (windowedLength,
+    vector < vector <real> > alphaTTPlusOne (windowedLength,
                                              vector <real> (numberOfFragments, 0.0));
     vector < vector <real> > betaTTPlusOne (windowedLength,
                                             vector <real> (numberOfFragments, 0.0));
@@ -2518,14 +2544,16 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
             if(probState[left] == 0 || probState[right] == 0)
                 continue;
             ulint doubleIndex = left * numberOfStates + right;
-            byte emission = emissionType[SScPair[left]][SScPair[right]];
+  //          byte emission = emissionType[SScPair[left]][SScPair[right]];
            
             alphaZero[t][trans] = probFragmentEmitsPrimarySymbol[trans][ seq[t+halfWindow] ];
-                                             // * probFragment[trans];
-                                            // / probState[left] / probState[right];
-            alphaTTplusOne[t][trans] = alphaZero[t][trans]
-                                            * probFragment[trans]
-                                            / probState[right] /probState[left];
+            alpha[t][t+1][pairIndex.at(doubleIndex)] = alphaZero[t][trans]
+                                                                    * probFragment[trans]
+                                                                    / probState[right] /probState[left];
+
+            // alphaTTPlusOne[t][trans] = alphaZero[t][trans]
+            //                                * probFragment[trans]
+            //                                / probState[right] /probState[left];
             /*
             if(emission == 1) {
                 alpha[t][t+1][doubleIndex] = alphaZero[t][trans]
@@ -2587,34 +2615,23 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                             ulint doubleIndexRight = prevRight * numberOfStates + nextRight;
                             
                             ulint childDoubleIndex = prevLeft*numberOfStates + prevRight;
-                    
+                            // if(pairIndex.find(childDoubleIndex) == pairIndex.end())
+                            //    continue;
+                            if((v > t+2 && emissionType[SScPair[prevLeft]][SScPair[prevRight]] == 0)
+                               || (v == t+2 &&
+                                   prevLeft / (numberOfStates / numberOfSecondarySymbols)
+                                   != prevRight / numberOfSecondarySymbols))
+                                continue;
                             if(probFragment[transRight]){
-                                real deltaAlpha = 0.0;
-                                if( v > t+2) {
-                                    deltaAlpha = alpha[t][v-1][childDoubleIndex]
-                                                        * alphaZero[v-1][transRight]
-                                                         * probFragment[transRight]
-                                                        / probState[nextRight]; // / probPrevLeft;
-                                }
-                                else if(v == t+2 &&
-                                        prevLeft % (numberOfStates / numberOfSecondarySymbols) ==
-                                        prevRight / numberOfSecondarySymbols) {
-                                    ulint transIndex = prevLeft * numberOfSecondarySymbols
-                                                        + prevRight % numberOfSecondarySymbols;
-                                    deltaAlpha = alphaTTplusOne[t][transIndex]
+                                real deltaAlpha = alpha[t][v-1][pairIndex.at(childDoubleIndex)]
                                                     * alphaZero[v-1][transRight]
                                                     * probFragment[transRight]
                                                     / probState[nextRight]; // / probPrevLeft;
-                                // if (v ==  t+2 && emissionType[SScPair[prevLeft]][SScPair[prevRight]] == 2)
-                                //    deltaAlpha /= probState[prevRight];
-                                
-                                }
+                           
                                     
-                                alpha[t][v][indexOfDoubleIndex.at(doubleIndex)] += deltaAlpha;
+                                alpha[t][v][pairIndex.at(doubleIndex)] += deltaAlpha;
                                 
                             }
-                             
-                          
                         }
                     }
                             
@@ -2628,29 +2645,20 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                             ulint doubleIndexLeft = prevLeft*numberOfStates + nextLeft;
                         
                             ulint childDoubleIndex = nextLeft*numberOfStates + nextRight;
-                                
+                            // if(pairIndex.find(childDoubleIndex) == pairIndex.end())
+                            //    continue;
+                            if((v > t+2 && emissionType[SScPair[nextLeft]][SScPair[nextRight]] == 0)
+                               || (v == t+2 &&
+                                   nextLeft / (numberOfStates / numberOfSecondarySymbols)
+                                   != nextRight / numberOfSecondarySymbols))
+                                continue;
                             if(probFragment[transLeft]){
-                                real deltaAlpha = 0.0;
-                                if ( v > t+2 ) {
-                                    deltaAlpha = alpha[t+1][v][childDoubleIndex]
+                                real deltaAlpha = alpha[t+1][v][pairIndex.at(childDoubleIndex)]
                                                         * alphaZero[t][transLeft]
                                                         * probFragment[transLeft]
                                                         / probState[prevLeft]; //  * probState[nextRight];
-                                }
-                                else if( v == t+2 &&
-                                        nextLeft % (numberOfStates / numberOfSecondarySymbols) ==
-                                        nextRight / numberOfSecondarySymbols) {
-                                    ulint transIndex = nextLeft * numberOfSecondarySymbols
-                                                        + nextRight % numberOfSecondarySymbols;
-                                    deltaAlpha = alphaTTplusOne[t+1][transIndex]
-                                                    * alphaZero[t][transLeft]
-                                                    * probFragment[transLeft]
-                                                    / probState[prevLeft]; // / probPrevLeft;
                                     
-                                }
-                               
-                                    
-                                alpha[t][v][indexOfDoubleIndex.at(doubleIndex)] += deltaAlpha;
+                                alpha[t][v][pairIndex.at(doubleIndex)] += deltaAlpha;
                                 
                                  /*
                                 else {                             // i.e. if (v == t + 2)
@@ -2691,7 +2699,8 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                 ulint doubleIndexRight = prevRight * numberOfStates + nextRight;
                                 
                                 ulint childDoubleIndex = nextLeft*numberOfStates + prevRight;
-                                
+                                if(pairIndex.find(childDoubleIndex) == pairIndex.end())
+                                    continue;
                                 real deltaAlpha = 0.0;
                                 
                                 // /*
@@ -2738,7 +2747,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                 
                                 if( (v - t) > 3){
                                     //ulint childDoubleIndex = nextLeft*numberOfStates + prevRight;
-                                    deltaAlpha = alpha[t+1][v-1][childDoubleIndex]
+                                    deltaAlpha = alpha[t+1][v-1][pairIndex.at(childDoubleIndex)]
                                                   
                                                     * alphaZero[t][transLeft] // alpha[t][t+1][doubleIndexLeft]
                                                     * probFragment[transLeft]
@@ -2762,7 +2771,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                    
                                 }
                                  */
-                                alpha[t][v][indexOfDoubleIndex.at(doubleIndex)] += deltaAlpha;
+                                alpha[t][v][pairIndex.at(doubleIndex)] += deltaAlpha;
                             
                             }
                         }
@@ -2797,7 +2806,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                 if(probState[j] == 0) // || SScPair[j] != 8)
                     continue;
                 if(emissionType[SScPair[i]][SScPair[j]]){
-                        beta[0][windowedLength-1][indexOfDoubleIndex.at(i*numberOfStates + j)] =
+                        beta[0][windowedLength-1][pairIndex.at(i*numberOfStates + j)] =
                             //probState[i] * probState[j];
                             probState_head[i] * probState_tail[j];
                 }
@@ -2809,7 +2818,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
          
             for(ulint j=0; j < numberOfStates; j++)
                 if(emissionType[SScPair[i]][SScPair[j]] > 0)
-                    beta[0][windowedLength-1][indexOfDoubleIndex.at(i*numberOfStates + j)] = 1.0;
+                    beta[0][windowedLength-1][pairIndex.at(i*numberOfStates + j)] = 1.0;
     }
     
     
@@ -2842,8 +2851,9 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                     if(emission == 0) continue;
                     
                     ulint parentDoubleIndex = prevLeft * numberOfStates + nextRight;
-                    ulint indexOfParentDoubleIndex = indexOfDoubleIndex.at(parentDoubleIndex);
-                
+                    // if(pairIndex.find(parentDoubleIndex) == pairIndex.end())
+                    //    continue;
+                    
                     if(emission == 1 && v < windowedLength-1) { //} && v > t && probPrevLeft && probNextRightVplus1){
                                               //  && (v > t + 1 || nextLeft == prevRight)){ // && beta[t][v+1][parentDoubleIndex]){
                                 
@@ -2859,65 +2869,41 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                             // if(probTrans[v][v+1][transRight] == 0) continue;
                              
                             ulint doubleIndex = prevLeft*numberOfStates + prevRight;
-                                //if(probDoubleState[doubleIndex] == 0)
-                                //    continue;
+                            if(pairIndex.find(doubleIndex) == pairIndex.end())
+                                continue;
                                 
-                             
+                            /*
+                            if((v > t+1 && emissionType[SScPair[prevLeft]][SScPair[prevRight]] == 0)
+                                || (v <= t+1 &&
+                                   prevLeft / (numberOfStates / numberOfSecondarySymbols)
+                                   != prevRight / numberOfSecondarySymbols))
+                                continue;
+                             */
                                 
-                                
-                            real deltaBeta = beta[t][v+1][indexOfParentDoubleIndex]
+                        
+    
+                            real deltaBeta = beta[t][v+1][pairIndex.at(parentDoubleIndex)]
                                                 // * alpha[v][v+1][doubleIndexRight]
-                                                 * probFragment[transRight]
+                                                * probFragment[transRight]
                                                 / probState[nextRight];
-                            
+                        
                             
                             if ( v >= t+1 ) {
                                 
-                                betaZero[v][transRight] += deltaBeta * alpha[t][v][doubleIndex];
-                                // if (t == 0 && v == windowedLength - 2) // && emissionType[SScPair[prevLeft]][SScPair[prevRight]] == 2)
-                                //     deltaBeta /= probState[prevLeft];
-                                beta[t][v][doubleIndex] += deltaBeta * alphaZero[v][transRight];
-                                // if (t==0 && v == windowedLength - 2) // && emissionType[SScPair[prevLeft]][SScPair[prevRight]] == 2)
-                                //    deltaBeta /= probState[prevLeft];
-                                // betaZero[v][transRight] += deltaBeta * alpha[t][v][doubleIndex]; // / probState[prevLeft];
-                                
-                                // beta[t][v][doubleIndex] += deltaBeta * alpha[v][v+1][doubleIndexRight];
-                                // beta[v][v+1][doubleIndexRight] += deltaBeta * alpha[t][v][doubleIndex];
+                                    betaZero[v][transRight] += deltaBeta * alpha[t][v][pairIndex.at(doubleIndex)];
+                                    beta[t][v][pairIndex.at(doubleIndex)] += deltaBeta * alphaZero[v][transRight];
                                
                             }
                             
-                            //else if (prevRight == prevLeft) {
-                            //    beta[v][v+1][doubleIndexRight] += deltaBeta;
-                            // }
+                          
                             
-                            
-                            /*
-                            else if (v == t+1 ) {
-                                
-                                // beta[t][v][doubleIndex] += deltaBeta * alpha[v][v+1][doubleIndexRight];
-                               // beta[v][v+1][doubleIndexRight] += deltaBeta * alpha[t][v][doubleIndex];
-                                for(uint ss=0; ss<numberOfSecondarySymbols; ss++){
-                                    ulint transLeft = prevLeft * numberOfSecondarySymbols + ss;
-                                  
-                                    ulint nextLeft = transLeft % numberOfStates;
-                                    if(nextLeft == prevRight) {
-                                       
-                                    
-                                        deltaBeta *= probFragment[transLeft] / probState[nextLeft] / probState[prevLeft];
-                                        betaZero[t][transLeft] += deltaBeta * alphaZero[v][transRight];
-                                        betaZero[v][transRight] += deltaBeta * alphaZero[t][transLeft];
-                                    }
-                                }
-                                 
-                            
-                            }
-                            */
-                            
+                 
                             // /*
                             else if (v == t && prevRight == prevLeft) {
                                 // if(v == windowedLength - 2) {
                                 //    deltaBeta *= probState[prevLeft]; // / probNextRight;
                                 // }
+                               
                                 betaZero[v][transRight] += deltaBeta / probState[prevRight];
                                 // beta[v][v+1][doubleIndexRight] += deltaBeta; // / probState[prevRight];
                                 
@@ -2944,51 +2930,37 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                   
                                 
                             ulint doubleIndex = nextLeft*numberOfStates + nextRight;
-                                // if(probDoubleState[doubleIndex] == 0)
-                                //    continue;
+                            // if(pairIndex.find(doubleIndex) == pairIndex.end())
+                            //    continue;
+                            
+                            // /*
+                            if((v > t+1 && emissionType[SScPair[nextLeft]][SScPair[nextRight]] == 0)
+                                || (v <= t+1 &&
+                                   nextLeft / (numberOfStates / numberOfSecondarySymbols)
+                                   != nextRight / numberOfSecondarySymbols))
+                                continue;
+                            // */
                                 
                              
 
-                            real deltaBeta = beta[t-1][v][parentDoubleIndex]
+                            
+                           
+                            real deltaBeta = beta[t-1][v][pairIndex.at(parentDoubleIndex)]
                                                     // * alpha[t-1][t][doubleIndexLeft]
-                            * probFragment[transLeft] / probState[prevLeft]; //  / probState[nextRight];
+                                                    * probFragment[transLeft]
+                                                    / probState[prevLeft];
                             
                             if ( v >= t+1 ) {
-                                beta[t][v][doubleIndex] += deltaBeta * alphaZero[t-1][transLeft] ;
+                                   
+                                betaZero[t-1][transLeft] += deltaBeta * alpha[t][v][pairIndex.at(doubleIndex)];
+                                beta[t][v][pairIndex.at(doubleIndex)] += deltaBeta * alphaZero[t-1][transLeft] ;
                                 
-                                // if(t <=  3 && v > 67 && emissionType[SScPair[nextLeft]][SScPair[nextRight]] == 1)
-                                //    betaZero[t-1][transLeft] += deltaBeta * alpha[t][v][doubleIndex] * probState[nextLeft];
-                                // else
-                                    betaZero[t-1][transLeft] += deltaBeta * alpha[t][v][doubleIndex];
-                                
-                                
-                                
-                                
-                                // beta[t][v][doubleIndex] += deltaBeta * alpha[t-1][t][doubleIndexLeft];
-                                // beta[t-1][t][doubleIndexLeft] += deltaBeta * alpha[t][v][doubleIndex];
-                             }
-                            
-                          
-                            /*
-                            else if (v == t+1) {
-                            
-                                for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
-                                                
-                                    ulint transRight = tt * numberOfStates + nextRight;
-                                    ulint prevRight = transRight / numberOfSecondarySymbols;
-                                    if(prevRight == nextLeft) {
-                                        // beta[t][v][doubleIndex] += deltaBeta * alphaZero[t-1][transLeft] ;
-                                        deltaBeta *= probFragment[transRight] / probState[prevRight] / probState[nextRight];
-                                        
-                                        betaZero[t][transRight] += deltaBeta * alphaZero[t-1][transLeft];
-                                        betaZero[t-1][transLeft] += deltaBeta * alphaZero[t][transRight];
-                                    }
-                                }
                             }
-                            */
+                          
                             
                             // /*
                             else if (v == t && nextLeft == nextRight) {
+                                
                                 betaZero[t-1][transLeft] += deltaBeta / probState[nextLeft];
                                 // beta[t-1][t][doubleIndexLeft] += deltaBeta; // / probState[nextLeft];
                                 
@@ -2997,13 +2969,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                         }
                     }
                             
-                            /*
-                           if(0 < t && t==2 && v == t+1){
-                              
-                               beta[t-1][t][doubleIndexLeft] *= probState[nextLeft];
-                           }
-                            */
-                            
+                    
                            
                     
                     else if(emission == 3  ) { //} && probState[prevLeft] && probState[nextRight] // ) {
@@ -3021,12 +2987,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                             if(probState[nextLeft] == 0) continue;
                             ulint doubleIndexLeft = prevLeft * numberOfStates + nextLeft;
                                     
-                                     /*
-                                    if(0 < t && t==2 && v == t+1){
-                                       
-                                        beta[t-1][t][doubleIndexLeft] *= probState[nextLeft];
-                                    }
-                                     */
+                      
                                 
                             for(uint tt=0; tt<numberOfSecondarySymbols; tt++){
                                 ulint transRight = tt * numberOfStates + nextRight;
@@ -3042,14 +3003,15 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                 ulint doubleIndex = nextLeft*numberOfStates + prevRight;
                                 ulint doubleIndex1 = nextLeft*numberOfStates + nextRight;
                                 ulint doubleIndex2 = prevLeft*numberOfStates + prevRight;
-                                
+                                if(pairIndex.find(doubleIndex) == pairIndex.end())
+                                    continue;
                                 
                                 
                                 // real deltaBeta = 0.0;
                                 if(t > 0 && v < windowedLength - 1 // && v > t + 1
-                                   && beta[t-1][v+1][parentDoubleIndex]){
+                                   && beta[t-1][v+1][pairIndex.at(parentDoubleIndex)]){
                                     
-                                    real transProb = beta[t-1][v+1][parentDoubleIndex]
+                                    real transProb = beta[t-1][v+1][pairIndex.at(parentDoubleIndex)]
                                                         * probFragment[transLeft]
                                                         * probFragment[transRight]
                                                         / probState[prevLeft]
@@ -3135,7 +3097,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                     
                                     else if(v > t+1) {
                                         
-                                        beta[t][v][doubleIndex] += deltaBeta;
+                                        beta[t][v][pairIndex.at(doubleIndex)] += deltaBeta;
                                     
                                     //these lines corresponds to the termination step
                                     
@@ -3146,7 +3108,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                                                         // * alpha[t][v+1][doubleIndex1];
                                                                         // * alpha[v][v+1][doubleIndexRight]
                                                                         * alphaZero[v][transRight]
-                                                                        * alpha[t][v][doubleIndex];
+                                                                        * alpha[t][v][pairIndex.at(doubleIndex)];
                                                                         // / probState[prevRight]
                                                                         // / probState[nextRight];
                                                                         // * probFragment[transRight] / probState[nextRight];
@@ -3157,7 +3119,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                                                                         // * alpha[t-1][v][doubleIndex2]
                                                                         // * alpha[t-1][t][doubleIndexLeft]
                                                                         * alphaZero[t-1][transLeft]
-                                                                        * alpha[t][v][doubleIndex];
+                                                                        * alpha[t][v][pairIndex.at(doubleIndex)];
                                                                         // / probState[prevLeft]
                                                                         // / probState[nextLeft];
                                                                         // * probFragment[transRight]
