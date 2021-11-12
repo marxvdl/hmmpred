@@ -910,10 +910,25 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
     
     
     
-    // BetaAlpha/AlphaBeta beginning from RIGHT
+    // exclusively single BetaAlpha/AlphaBeta all the way, beginning from RIGHT
     
     /*
-     byte emissionType[9][9] ={{1, 0, 1, 0, 2, 1, 1, 0, 1},
+     byte emissionType[9][9] ={{1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 2, 0, 0, 0, 1}};
+    */
+  
+    
+    // exclusively single BetaAlpha/AlphaBeta returning to CC-CC, beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{1, 0, 0, 0, 2, 1, 1, 0, 1},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 2, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -923,10 +938,26 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                                {0, 0, 0, 0, 2, 0, 0, 0, 0},
                                {2, 0, 1, 0, 2, 0, 0, 0, 1}};
     */
-  
-    // AlphaBeta/BetaAlpha beginning from RIGHT
     
-     /*
+    // exclusively single AlphaBeta/BetaAlpha all the way, beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 2, 1, 0, 0, 1}};
+    */
+    
+    
+  
+    // exclusiveky single AlphaBeta/BetaAlpha returning to CC-CC, beginning from RIGHT
+    
+    /*
      byte emissionType[9][9] ={{1, 0, 0, 0, 0, 0, 1, 0, 2},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 2},
@@ -938,9 +969,23 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                                {2, 0, 0, 0, 2, 1, 0, 0, 1}};
     */
     
-    // AlphaBeta/AlphaBeta beginning from RIGHT
+    // exclusively single AlphaBeta/AlphaBeta all the way, beginning from RIGHT
     
      /*
+     byte emissionType[9][9] ={{2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 2, 0, 0, 0, 1}};
+     */
+    
+    // exclusively single AlphaBeta/AlphaBeta returning to CC-CC, beginning from RIGHT
+    
+    /*
      byte emissionType[9][9] ={{0, 0, 0, 0, 1, 0, 0, 1, 2},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {0, 0, 0, 0, 0, 0, 0, 0, 2},
@@ -950,11 +995,29 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                                {0, 0, 0, 0, 2, 0, 0, 0, 0},
                                {2, 0, 0, 0, 0, 0, 0, 0, 0},
                                {2, 0, 1, 0, 2, 0, 0, 0, 1}};
-     */
-  
-    // BetaAlpha/BetaAlpha beginning from RIGHT
+    */
     
-    // /*
+    
+  
+    // exclusively single BetaAlpha/BetaAlpha all the way, beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 2, 1, 0, 0, 1}};
+    */
+    
+    
+  
+    // exclusively single BetaAlpha/BetaAlpha returning to CC-CC, beginning from RIGHT
+    
+    /*
      byte emissionType[9][9] ={{2, 0, 1, 0, 1, 0, 0, 1, 1},
                                {0, 0, 0, 0, 0, 0, 0, 0, 0},
                                {2, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -964,7 +1027,35 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                                {0, 0, 0, 0, 2, 0, 0, 0, 0},
                                {2, 0, 0, 0, 0, 0, 0, 0, 0},
                                {2, 0, 0, 0, 2, 1, 0, 0, 1}};
-    // */
+    */
+    
+    // exclusively single, first Alpha then Beta all the way, beginning from RIGHT
+    
+     /*
+     byte emissionType[9][9] ={{2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 2, 1, 0, 0, 1}};
+    */
+    
+    // exclusively single, first Alpha then Beta all the way, beginning from LEFT
+    
+     /*
+     byte emissionType[9][9] ={{1, 0, 1, 0, 0, 0, 1, 0, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 0, 0, 0, 0, 1},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 2}};
+    */
     
     // alpha<->alpha and beta<->beta antiparallel double clauses
     
@@ -1201,7 +1292,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
 
     // all four combinations of seconcadary structure in opposite fragments, no branch removal (equivalent do the HMM !!!).
     
-    /*
+     /*
     byte emissionType[9][9] ={{0, 0, 0, 0, 0, 0, 2, 2, 0},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {0, 0, 2, 0, 0, 2, 1, 1, 1},
@@ -1211,7 +1302,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                              {1, 0, 1, 0, 1, 1, 2, 2, 0},
                              {1, 0, 1, 0, 1, 1, 2, 2, 0},
                              {0, 0, 2, 0, 0, 2, 1, 1, 1}};
-   */
+    */
     
   // alternating fragment pairs must have THE SAME seconadary structure (Alpha_Alpha or Beta_Beta),
   // all branches with opposite fragments with different secondary structure are removed
@@ -1246,7 +1337,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
     
     // Alternating sides for C and nonC (E or H) fragments beginning at LEFT, should also be equivalent to the HMM. NOW WORKING !!!
 
-   /*
+   // /*
    byte emissionType[9][9] ={{0, 0, 2, 0, 0, 2, 0, 0, 0},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {1, 0, 1, 0, 1, 1, 2, 2, 0},
@@ -1256,7 +1347,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                              {0, 0, 2, 0, 0, 2, 1, 1, 1},
                              {0, 0, 2, 0, 0, 2, 1, 1, 1},
                              {0, 0, 0, 0, 0, 0, 2, 2, 2}};
-   */
+   // */
     
     /*
     byte emissionType[9][9] ={{0, 0, 0, 0, 0, 0, 2, 2, 2},
@@ -1307,7 +1398,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
                              {1, 0, 1, 0, 0, 0, 2, 0, 0},
                              {0, 0, 0, 0, 0, 0, 0, 0, 0},
-                             {0, 0, 2, 0, 0, 0, 0, 0, 0}};
+                             {0, 0, 2, 0, 0, 0, 0, 0, 1}};
     */
     
     // Alternating sides for C and nonC (only E and no H) fragments beginning at LEFT, also equivalent to the HMM ?
@@ -1369,7 +1460,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                               {3, 3, 3, 3, 3, 3, 3, 3, 3}};
      */
     
-    /*
+   /*
     //Everybody emits at left/right, again, but no HE or HE
     
     byte emissionType[9][9] ={{3, 0, 3, 0, 3, 3, 3, 3, 3},
@@ -1381,7 +1472,7 @@ void Hmm::insideOutsideV2(vector<byte>& seq){
                               {3, 0, 3, 0, 3, 3, 3, 3, 3},
                               {3, 0, 3, 0, 3, 3, 3, 3, 3},
                               {3, 0, 3, 0, 3, 3, 3, 3, 3}};
-     */
+    */
     
    
     
@@ -2243,7 +2334,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
     // Double productions for the same secondary structures: XE-W-EX, XH-W-HX, XC-W-CX.
     // Otherwise first left and then right, E > H > C, no EH or HE.
     
-    // /*
+    /*
     byte emissionType[9][9] ={{3, 0, 0, 0, 0, 0, 2, 0, 0},
                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
                               {1, 0, 0, 0, 0, 0, 3, 0, 0},
@@ -2253,7 +2344,7 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                               {0, 0, 3, 0, 1, 1, 0, 1, 1},
                               {0, 0, 2, 0, 0, 3, 0, 0, 1},
                               {0, 0, 2, 0, 0, 2, 0, 0, 3}};
-    // */
+    */
     
     // exclusively double emission for XE-W-EX
     
@@ -2282,6 +2373,139 @@ void Hmm::insideOutsideV3(vector<byte>& seq){
                               {0, 0, 0, 0, 0, 3, 0, 0, 1},
                               {0, 0, 2, 0, 0, 2, 0, 0, 3}};
    */
+    
+    
+    // exclusively single BetaAlpha/AlphaBeta all the way, beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 2, 0, 0, 0, 1}};
+    */
+  
+    
+    // exclusively single BetaAlpha/AlphaBeta returning to CC-CC, beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 1, 0, 0, 1, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 2, 0, 0, 0, 1}};
+    */
+    
+    // exclusively single AlphaBeta/BetaAlpha all the way, beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 2, 1, 0, 0, 1}};
+    */
+    
+    
+  
+    // exclusiveky single AlphaBeta/BetaAlpha returning to CC-CC, beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{1, 0, 0, 0, 0, 0, 1, 0, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 2, 1, 0, 0, 1}};
+    */
+    
+    // exclusively single AlphaBeta/AlphaBeta all the way, beginning from RIGHT
+    
+     /*
+     byte emissionType[9][9] ={{2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 2, 0, 0, 0, 1}};
+     */
+    
+    // exclusively single AlphaBeta/AlphaBeta returning to CC-CC, beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{0, 0, 0, 0, 1, 0, 0, 1, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {1, 0, 0, 0, 2, 1, 1, 0, 1},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 2, 0, 0, 0, 1}};
+    */
+    
+    
+  
+    // BetaAlpha/BetaAlpha beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {1, 0, 0, 0, 0, 0, 1, 0, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 2, 1, 0, 0, 1}};
+    */
+    
+    
+  
+    // BetaAlpha/BetaAlpha beginning from RIGHT
+    
+    /*
+     byte emissionType[9][9] ={{2, 0, 1, 0, 1, 0, 0, 1, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {1, 0, 0, 0, 0, 0, 1, 0, 2},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {0, 0, 0, 0, 2, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 2, 1, 0, 0, 1}};
+    */
+    
+    // exclusively single AlphaBeta/AlphaBeta all the way, beginning from RIGHT
+    
+     // /*
+     byte emissionType[9][9] ={{1, 0, 1, 0, 0, 0, 1, 0, 1},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 1, 0, 0, 0, 0, 0, 1},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 0},
+                               {0, 0, 0, 0, 0, 0, 0, 0, 2},
+                               {2, 0, 0, 0, 0, 0, 0, 0, 2}};
     
     
     // Attempting alpha/beta antiparallel double clauses
